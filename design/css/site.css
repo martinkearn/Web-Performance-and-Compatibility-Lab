@@ -1,0 +1,8 @@
+.icon{
+max-height: 25px;
+}
+
+.thumbnail{
+	cursor:zoom-in;
+	-webkit-cursor:zoom-in;
+}
