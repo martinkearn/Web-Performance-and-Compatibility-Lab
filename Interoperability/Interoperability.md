@@ -4,7 +4,7 @@ In this lab you will scan a website for modern web interoperability problems, an
 
 If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with [Azure Web App Service](https://azure.microsoft.com/en-us/services/app-service/web/) and the source integration feature, you simply commit to GitHub, VSO or whatever source control system you are using and the site gets deployed. However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
 
-Please note that there are several oddities with the code used in this lab which are not related to interoperaibility. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
+There are several oddities with the code used in this lab which are not related to interoperaibility. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
 
 ##1. Scan your site
 A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
@@ -22,6 +22,8 @@ The report tells us that there is a problem with the rendering mode for the page
 
 ```<meta http-equiv="x-ua-compatible" content="IE=8">```
 
+3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+
 This code forces the browser to try and render in IE8 mode which cuases several comaptibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
 
 ##3. Frameworks and Libraries
@@ -37,6 +39,8 @@ The report says "We've found frameworks or libraries that are not up-to-date and
 
 ```<script src="js/jquery-2.1.4.min.js"></script>```
 
+1. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+
 ##4. Browser Detection
 Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themsevles. This kind of code was necesary years ago, but it is not required now with modern browsers.
 
@@ -51,6 +55,8 @@ if (!Modernizr.svg) {
 }
 ```
 
+3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+
 This is a very simple example of how to do feature detetcion with Modernizr via Javascript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivilent.
 
 ##5. CSS prefixes
@@ -62,6 +68,7 @@ This site uses Bootstrap which unfortunately does use a relatively large amount 
 
 1. Open /interoperability/begin/css/site.css in Visual Studio Code
 2. Replace `-webkit-cursor:zoom-in` with `cursor:zoom-in`
+3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 We are now using the standard CSS cursor property which means that all browsers that support it will be able to use it.
 
