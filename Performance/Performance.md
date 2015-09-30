@@ -159,12 +159,17 @@ gulp.task('task-jsmin', function() {
 8. Open /performance/begin/Index.html in Visual Studio Code
 9. Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/css/bundle.css" rel="stylesheet">`
 10. Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
-11. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow.
-
+11. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100
 
 ##Serve static files from Azure Storage
-Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used, so to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content.
+Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used. So to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content. The files have all been configured with expires headers.
 
 It is not within scope of this lab to talk through creating Azure Storage accounts, but it is very simple. Find out more [here](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/).
+
+1. Open /performance/begin/Index.html in Visual Studio Code
+2. Replace all references to `wwwroot/css/` with `https://ninjacatgallery.blob.core.windows.net/static/`
+3. Replace all references to `wwwroot/js/` with `https://ninjacatgallery.blob.core.windows.net/static/`
+4. Replace all references to `images/` with `https://ninjacatgallery.blob.core.windows.net/static/`
+5. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow.
 
 https://ninjacatgallery.blob.core.windows.net/static
