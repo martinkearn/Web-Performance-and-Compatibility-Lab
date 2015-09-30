@@ -1,4 +1,4 @@
-# Modern web interoperability
+# Modern Web Interoperability
 
 In this lab you will scan a website for modern web interoperability problems, and then fix them.
 
