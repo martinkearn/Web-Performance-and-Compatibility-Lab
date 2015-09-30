@@ -6,3 +6,7 @@ max-height: 25px;
 	cursor:zoom-in;
 	-webkit-cursor:zoom-in;
 }
+
+.modal-body img{
+	max-width: 100%;
+}
