@@ -79,4 +79,4 @@ You can see a copy of the site after these steps have been completed here: [http
 
 Note: The site will still fail the CSS prefixes test but these failure are caused by Bootstrap and is therefore out of your control.
 
-##Proceed to the [Performance optimisation and tuning excersise](Performance/Performance.md)
+##7. Proceed to the [Performance optimisation and tuning excersise](Performance/Performance.md)
