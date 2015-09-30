@@ -74,6 +74,24 @@ Font awesome is already part of the project, lets use it.
 
 4. Zoom in on the new icon in your browser and see that it remain crisp and high quality even when fully zoomed in.
 
+##Analyse with Google Page Speed Insights
+The remaining YSlow suggestions all relate to optimising the delivery of static files. Before we do that, lets take a look at what Google Page Speed Insight say about our page. Google PageSpeed is the other main authoratative resources for analysing web performance. Google use a different ruleset but there is a lot of overlap with YSlow.
+
+1. Visit [https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/) in any browser
+2. Enter 'http://ninjacatgallery.azurewebsites.net/performance/begin/index.html' and click analyse
+3. Take a moment ot look through the report both for Mobile and Desktop. Please note that we may have fixed some of these issues already in the previous section of this excersise (unless you have been publishing your own copy as we've gone along)
+4. Leave the report open as we'll refer back to it throughout the lab
+
+##Optimise images
+The number one complaint in Google PageSpeed is the optimisation of images. They say "Properly formatting and compressing images can save many bytes of data. Optimize the following images to reduce their size by 534.9KiB (66% reduction).".
+
+There are many tool avaliabel to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
+
+To save time, all the referenced image have been optimised and stored in /performance/begin/optimisedimages, lets use them.
+
+1. Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
+2. (optional) If you can, publish your page and re-test with Google PageSpeed. Your score will move to 
+
 ##Serve static files from Azure Storage
 Several of the recomendations relate to the way static files are served. The way these are addressed, depends opn the web server that is used, so to make the lab simpler, a copy of the static file have been loaded onto Azure Storage which is a superb location for storing and serving static content.
 
