@@ -50,3 +50,15 @@ if (!Modernizr.svg) {
 ```
 
 This is a very simple example of how to do feature detetcion with Modernizr via Javascript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivilent.
+
+##CSS prefixes
+A CSS prefix is where a CSS property is prefixed with a vendor specific label such as -webkit- or -ms-. Prefixes are used by browser vendors to implement early versions of CSS properties as they emerge. Eventually, if a CSS property becomes part of the standard it will be available without the prefix.
+
+The report says "We've found that this webpage may have missing vendor-specific prefixes or may have implemented vendor-specific prefixes when they are not required in common CSS properties". The goal is that we avoid vendor specific prefixes wherever possible, in fact some browser such as Microsoft Edge do not even implement prefixes now and many other browser vendors are going the same route.
+
+This site uses Bootstrap which unfortunately does use a relatively large amount of vendor prefixes in the current version. However, the sites own CSS uses `-webkit-transition` to apply a hover transition effect to eth Title. There is no standard fall back which means this rule will only apply to website browsers.
+
+1. Open begin/css/site.css in Visual Studio Code
+2. Replace `-webkit-transition: color 0.5s ease;` with `transition: color 0.5s ease;`
+
+We are now using the standard CSS transition property which means that all browsers that support it will be able to use it.
