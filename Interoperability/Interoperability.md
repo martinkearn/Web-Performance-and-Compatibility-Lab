@@ -67,3 +67,5 @@ We are now using the standard CSS cursor property which means that all browsers 
 If you are able to, upload the changes copy of your site and repeat step 1. You should find that the site now passes all tests in the 'Modern Web Interoperability' test
 
 You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/).
+
+Note: The site will still fail the CSS prefixes test but these failure are caused by Bootstrap and is therefore out of your control.
