@@ -18,9 +18,8 @@ The report tells us that there is a problem with the rendering mode for the page
 1. Open /begin/index.html in Visual Studio Code
 2. Identify the line that looks like the following and remove it.
 
-  <!--Specify IE8 mode-->
-  <meta http-equiv="x-ua-compatible" content="IE=8">
+		<meta http-equiv="x-ua-compatible" content="IE=8">
 
 This code forces the browser to try and render in IE8 mode which cuases several comaptibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is:
 
-  <!DOCTYPE html>
+  	<!DOCTYPE html>
