@@ -12,7 +12,7 @@
 
   <title>Ninja Cat Gallery</title>
   
-  
+  <!-- Modernizr core CSS -->
   <script src="js/modernizr-custom.js"></script>
 
   <!-- Bootstrap core CSS -->
@@ -62,7 +62,7 @@
   <div class="container">
 
     <!--GALLERY-->
-    <div class="row">
+    <div id="gallery-container" class="row">
       <div class="col-md-12">
         <h2><a name="gallery"></a>Gallery</h2>
         <p>A gallery of some of the most popular Ninja cat variations.</p>
@@ -72,9 +72,7 @@
         <h3>Ninja Cat on Unicorn</h3>
         <p>This is the original artwork released from Microsoft. It features a brown ninja cat riding a white unicorn in a proud
           upright stance whilst waving a Microsoft flag.</p>
-        <p>
           <a href="images/Windows_Insider_Battlecat_Unicorn.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="images/Windows_Insider_Battlecat_Unicorn.png" /></a>
-        </p>
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnUnicorn" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-lg" role="document">
@@ -97,9 +95,8 @@
         <h3>Ninja cat on Narwhal</h3>
         <p>This variation features the brown ninja cat adopting a low slung position riding a narwhal whale. The whale itself
           has an interesting addition of some bacon on its spear.</p>
-        <p>
-          <a href="images/Windows_Insider_Battlecat_Narwhal.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" /></a>
-        </p>
+<a href="images/Windows_Insider_Battlecat_Narwhal.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" /></a>
+
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnNarwhal" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-lg" role="document">
@@ -122,9 +119,9 @@
         <h3>Ninja cat on TRex</h3>
         <p>This variation features a ginger ninja cat adopting the low slung style whilst riding a TRex. The TRex curiously
           appears to be in possesion of some rubbish pickers.</p>
-        <p>
+
           <a href="images/Windows_Insider_Battlecat_Trex.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="images/Windows_Insider_Battlecat_Trex.png" /></a>
-        </p>
+
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnTRex" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-lg" role="document">
@@ -148,10 +145,10 @@
         <p>These Microsoft cartoons were inspired by an orginal peice of artwork called <a href="https://www.etsy.com/uk/listing/107306078/welcome-to-the-internet-hq?ref=listing-shop-header-1">'Welcome to the internet' by Jason Heuser aka 'Sharpwriter'</a>.
           This has a slightly more sinister feel in that the cat has a golden handgun to compliment the unicorn's fire. It
           is set against a backdrop of a pixelatted world featuring a raindbows, fire and a small sprite.</p>
-        <p>
+
           <a href="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" class="thumbnail" data-toggle="modal"
           data-target="#WelcomeToTheInternet"><img src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" /></a>
-        </p>
+
         <!-- Modal -->
         <div class="modal fade" id="WelcomeToTheInternet" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-lg" role="document">
@@ -198,7 +195,7 @@
         <h2><a name="contact"></a>Contact</h2>
         <p>This website is designed and maintained by Martin Kearn form Microsoft UK. Contact Martin via any of the following channels:</p>
         <ul class="list-unstyled">
-          <!--<li><a href="http://twitter.com/martinkearn"><img class="icon" src="images/twitter.png" /> @MartinKearn</a></li>-->
+          <li><a href="http://twitter.com/martinkearn"><img class="icon" src="images/twitter.png" /> @MartinKearn</a></li>
           <li><a href="http://twitter.com/martinkearn"><i class="fa fa-twitter fa-lg"></i> @MartinKearn</a></li>
           <li><a href="http://aka.ms/martinkearn"><i class="fa fa-rss fa-lg"></i> aka.ms/MartinKearn (blog)</a></li>
           <li><a href="mailto:martin.kearn@microsoft.com"><i class="fa fa-envelope-o fa-lg"></i> Martin.Kearn@Microsoft.com</a></li>

@@ -12,10 +12,15 @@
 }
 
 .thumbnail{
-	cursor:zoom-in;
-	/*-webkit-cursor:zoom-in;*/
+	-webkit-cursor:zoom-in;
 }
 
 .modal-body img{
 	max-width: 100%;
+}
+
+#gallery-container p{
+    max-height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
