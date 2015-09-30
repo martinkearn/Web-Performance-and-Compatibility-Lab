@@ -32,6 +32,25 @@ According to YSlow, CSS references should always be in the HEAD of the html docu
   <link href="css/site.css" rel="stylesheet">
 ```  
 3. Move this code to be located at the bottom of the HEAD section, just before the closing `</head>` line
+4. (optional) If you can, publish your page and re-test with YSlow. Your score will move to grade B 80/100
+
+##Move Javascript to the bottom of the file
+According to YSlow, Javascript references should be at the bottom of the page. YSlow says "JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable."
+
+1. Open /performance/begin/Index.html in Visual Studio Code
+2. Locate the following code in the HEAD of the document
+
+```
+  <!-- Modernizr core CSS -->
+  <script src="js/modernizr-custom.js"></script>
+
+  <!-- Bootstrap core JavaScript-->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.js"></script>
+  <script src="js/site.js"></script>
+``` 
+3. Move this code to be located at the bottom of the BODY section, just before the closing `</body>` line 
+4. (optional) If you can, publish your page and re-test with YSlow. Your score will move to grade B 80/100
 
 ##Serve static files from Azure Storage
 Several of the recomendations relate to the way static files are served. The way these are addressed, depends opn the web server that is used, so to make the lab simpler, a copy of the static file have been loaded onto Azure Storage which is a superb location for storing and serving static content.
