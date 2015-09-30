@@ -2,18 +2,18 @@
 
 These are pre-requisiste steps which you may or may not have have completed on your machine.
 
-## Install Visual Studio Code
+##1. Install Visual Studio Code
 These labs will use **Visual Studio Code** as the development environment for building and updating the sample web application. You can use any web text editor such as Sublime if you wish, but the instructions are written based on Visual Studio Code.
 
 You can download **Visual Studio Code** for Windows, Linux and OSX from [here](https://code.visualstudio.com/).
 
-## Have Google Chrome installed
+##2. Have Google Chrome installed
 The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [here](https://www.google.com/chrome/index.html)
 
-## Clone or download content of this GitHub repository (optional but recommended)
+##3. Clone or download content of this GitHub repository (optional but recommended)
 The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, we strongly recommend you clone (using [Git](http://git-scm.com/)) or download all content in this repository locally on your computer.
 
-## OPTIONAL: Get access to Windows 10 with Microsoft Edge
+##4. OPTIONAL: Get access to Windows 10 with Microsoft Edge
 These labs work best if you have Microsoft Edge which is the default browser in Windows 10. If you are already using Windows 10, you are good to go.
 
 Do not worry if you cannot get Windows 10, it is a nice to have for this lab, not mandatory. If you would like to test Microsoft Edge out, there are a few options depending on what type of machine you are using:
