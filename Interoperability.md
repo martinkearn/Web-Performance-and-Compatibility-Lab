@@ -16,15 +16,37 @@ A copy of the site in the /begin folder for this lab has been published to the f
 The report tells us that there is a problem with the rendering mode for the page. It says "There is an issue with this website that could force an old document mode intended for older versions of Internet Explorer".
 
 1. Open /begin/index.html in Visual Studio Code
-2. Identify the line that looks like the following and remove it: `<meta http-equiv="x-ua-compatible" content="IE=8">`
+2. Identify the line that looks like the following and remove it: 
+
+```<meta http-equiv="x-ua-compatible" content="IE=8">```
 
 This code forces the browser to try and render in IE8 mode which cuases several comaptibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
 
-##Frameworks and libraries
+##Frameworks and Libraries
 One of the biggest causes for compatibility problems in most modern browsers is use of old libraries and frameworks. As libraries evolve, they are updated to work with modern browsers and some of the old hacks required for older browsers are removed so you should always try to use the latest versions of libraries and frameworks where possible, to make sure you have the very latest compatibility and interoperability fixes from the vendor.
 
 The report says "We've found frameworks or libraries that are not up-to-date and might contain bugs.". This is because the site is referencing JQuery version 1.8.0. We need to upgrade this to the latest version which is 2.1.4 (at the time of writing)
 
-1. In /begin/index.html, locate the following line `<script src="js/jquery-1.8.0.min.js"></script>`
+1. In /begin/index.html, locate the following line:
 
-1. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version avaliable. If there is, use it. The reference should now look like this `<script src="js/jquery-2.1.4.min.js"></script>`
+```<script src="js/jquery-1.8.0.min.js"></script>```
+
+1. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version avaliable. If there is, use it. The reference should now look like this: 
+
+```<script src="js/jquery-2.1.4.min.js"></script>```
+
+##Browser Detection
+Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themsevles. This kind of code was necesary years ago, but it is not required now with modern browsers.
+
+The report says "We've found that this webpage may be using browser detection techniques to determine how the webpage should render across many different versions of browsers".  The offending code is in site.js where we check for the prescence of ie with `if (navigator.userAgent.indexOf("MSIE") > 0)`. If we find that the site is in IE, we replace the SVG (not supported by older versions of IE) with a PNG. As suggested by the report, we'll fix this with Modernizr.
+
+1. Open /begin/js/site.js in Visual Studio Code
+2. Replace the full content of the file with this code
+
+```
+if (!Modernizr.svg) {
+	document.getElementById('logo').src = 'images/Microsoft_logo.png';
+}
+```
+
+This is a very simple example of how to do feature detetcion with Modernizr via Javascript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivilent.
