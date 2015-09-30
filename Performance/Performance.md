@@ -50,7 +50,29 @@ According to YSlow, Javascript references should be at the bottom of the page. Y
   <script src="js/site.js"></script>
 ``` 
 3. Move this code to be located at the bottom of the BODY section, just before the closing `</body>` line 
-4. (optional) If you can, publish your page and re-test with YSlow. Your score will move to grade B 80/100
+4. (optional) If you can, publish your page and re-test with YSlow. Your score will move to 82/100
+
+##Replace the Twitter icon with a font
+This one is not picked up by YSlow because we are only using one icon in this page, but most websites use a large number of small images for icons (twitter, add to cart, contact etc). 
+
+It is a great idea to use an icon font such as [Font Awesome](http://fortawesome.github.io/Font-Awesome/) rater than images for these kind of icons. It means fewer requests, smaller files, better quality and easier manipulation with CSS.
+
+Font awesome is already part of the project, lets use it.
+
+1. Open /performance/begin/Index.html in Visual Studio Code
+2. Find the line that looks like this at the bottom of the file
+
+```
+<a href="http://twitter.com/martinkearn"><img class="icon" src="images/twitter.png" /> @MartinKearn</a>
+```
+
+3. Replace the IMG element with this `<i class="fa fa-twitter fa-lg"></i>`. The finished code should look like:
+
+```
+<a href="http://twitter.com/martinkearn"><i class="fa fa-twitter fa-lg"></i> @MartinKearn</a>
+```
+
+4. Zoom in on the new icon in your browser and see that it remain crisp and high quality even when fully zoomed in.
 
 ##Serve static files from Azure Storage
 Several of the recomendations relate to the way static files are served. The way these are addressed, depends opn the web server that is used, so to make the lab simpler, a copy of the static file have been loaded onto Azure Storage which is a superb location for storing and serving static content.
