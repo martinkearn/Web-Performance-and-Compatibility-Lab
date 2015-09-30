@@ -85,17 +85,21 @@ The remaining YSlow suggestions all relate to optimising the delivery of static 
 ##Optimise images
 The number one complaint in Google PageSpeed is the optimisation of images. They say "Properly formatting and compressing images can save many bytes of data. Optimize the following images to reduce their size by 534.9KiB (66% reduction).".
 
+As well as optimising images, it is important that they are served at the size in which they are expected to be rendered. We do not want browsers having to re-size images because it is more work for the browser to do and it is more data that the browser needs to download. The YSlow report states "Web page designers sometimes set image dimensions by using the width and height attributes of the HTML image element. Avoid doing this since it can result in images being larger than needed."
+
+The page displays the thumbnail images at 350px wide, but the actual images are 1920px wide.
+
 There are many tool available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
 
-To save time, all the referenced images have been optimised and stored in /performance/begin/optimisedimages, lets use them.
+To save time, all the referenced images have been optimised, resized and stored in /performance/begin/optimisedimages, lets use them.
 
 1. Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
-2. (optional) If you can, publish your page and re-test with Google PageSpeed. You'll notice that 'optimise images' is no longer an issue
+2. Open /performance/begin/Index.html in Visual Studio Code
+3. For each thumbnail DIV, change the HREF of the thumbnail A tag to have `-large` at the end. For example, change `<a href="images/Windows_Insider_Battlecat_Unicorn.png"` to `<a href="images/Windows_Insider_Battlecat_Unicorn-large.png"`
+4. For each thumbnail DIV, change the SRC of the IMG tag to have `-large` at the end. For example, change `<img src="images/Windows_Insider_Battlecat_Unicorn.png" />` to `<img src="images/Windows_Insider_Battlecat_Unicorn-large.png" />`
+5. (optional) If you can, publish your page and re-test with Google PageSpeed. You'll notice that 'optimise images' is no longer an issue
 
-##Serve images at the right size
-As well as optimising images, it is important that they are served at the size in which they are expected to be rendered. We do not want browsers having to re-size images because it is more work for the browser to do and it is more data that the browser needs to download.
-
-The page displays the thumbnail images at 350 x 197, but the actual images are 190 x 1080. 
+ 
 
 ##Minify CSS with Gulp
 
