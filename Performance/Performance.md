@@ -157,7 +157,7 @@ gulp.task('task-jsmin', function() {
 
 7. Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles
 8. Open /performance/begin/Index.html in Visual Studio Code
-9. Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
+9. Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/css/bundle.css" rel="stylesheet">`
 10. Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
 11. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow.
 
