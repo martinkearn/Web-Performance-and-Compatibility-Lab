@@ -1,7 +1,8 @@
 var gulp = require('gulp'),
 	cssmin = require('gulp-cssmin'),
 	jsmin = require('gulp-uglify'),
-  concat = require('gulp-concat');
+  concat = require('gulp-concat'),
+  gzip = require('gulp-gzip')
 
 gulp.task('task-cssmin', function() {
   gulp.src('css/*.css')
