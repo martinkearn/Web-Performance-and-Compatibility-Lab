@@ -29,7 +29,8 @@ One of the biggest causes for compatibility problems in most modern browsers is 
 
 The report says "We've found frameworks or libraries that are not up-to-date and might contain bugs.". This is because the site is referencing JQuery version 1.8.0. We need to upgrade this to the latest version which is 2.1.4 (at the time of writing)
 
-1. In Index.html, locate the folloiwng line
+1. In Index.html, locate the following line
+
 	<script src="js/jquery-1.8.0.min.js"></script>
 
 1. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in eth project but there may be a newer version avaliable. If there is, use it. The reference shoudl now look like this
