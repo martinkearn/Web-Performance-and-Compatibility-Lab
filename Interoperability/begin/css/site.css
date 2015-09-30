@@ -1,8 +1,3 @@
-h1:hover{
-    -webkit-transition: color 0.5s ease;
-    color: #F05334;
-}
-
 .navbar-brand{
     padding: 10px;
     margin: 0;
@@ -17,7 +12,7 @@ h1:hover{
 }
 
 .thumbnail{
-	cursor:zoom-in;
+	-webkit-cursor:zoom-in;
 }
 
 .modal-body img{
