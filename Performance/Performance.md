@@ -99,26 +99,68 @@ To save time, all the referenced images have been optimised, resized and stored 
 4. For each thumbnail DIV, change the SRC of the IMG tag to have `-large` at the end. For example, change `<img src="images/Windows_Insider_Battlecat_Unicorn.png" />` to `<img src="images/Windows_Insider_Battlecat_Unicorn-large.png" />`
 5. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
 
-##Minify CSS with Gulp
+##Minify CSS and Javascript files with Gulp
 Both YSlow and Google Page speed recomend the minification of both JS and CSS files. YSlow says "Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced."
 
 To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javascript task runner and has plug-ins that perform minification tasks.
 
 1. Open a command prompt and navigate to your working folder ... {some local path}/performance/end
-2. Run `npm install gulp`. This will install Gulp to your project
-3. Run `npm install gulp-cssmin`. This will install Gulp-CSSMin plug-in to your project for CSS minification
-3. Run `npm install gulp-uglify`. This will install Gulp-Uglify plug-in to your project for JS minification
+2. Run `npm install gulp`. This will install [Gulp](http://gulpjs.com) to your project
+3. Run `npm install gulp-cssmin`. This will install [Gulp-CSSMin](https://www.npmjs.com/package/gulp-cssmin) plug-in to your project for CSS minification
+3. Run `npm install gulp-uglify`. This will install [Gulp-Uglify](https://www.npmjs.com/package/gulp-uglify/) plug-in to your project for JS minification
 4. Take a look at the existing gulpfile.js to get a feel for what it is doing. An explanation of Gulp is out of scope for this excersise, so if you are new to Gulp, just accept that this file controls what happens and move on! :)
 5. Back in the command prompt, run `gulp`. This will execute the Gulp tasks and minify your files
 6. Take a look at your /performance/begin/ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
 7. Open /performance/begin/Index.html in Visual Studio Code
 8. Replace all references to `css/` to `wwwroot/css/` to reference the minified CSS files
 9. Replace all references to `js/` to `wwwroot/js/` to reference the minified JS files
-10. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow
+10. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. The scores will not change by much because of the relatively low number of CSS and JS files. Howeve rin a real world project this would have a bigger impact.
 
-##Minify Javascript with Gulp
+##Bundle CSS and Javascript files with Gulp
+Now that we have minified our CSS and JS files, we need to bundle them together to reduce the number of requests required. YSlow says "Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.".
 
-##Bundle CSS and Javascript with Gulp
+Again, we'll use a Gulp plug-in for this task; [gulp-contact](https://www.npmjs.com/package/gulp-concat/).
+
+1. Open a command prompt and navigate to your working folder ... {some local path}/performance/end
+2. Run `npm install gulp-contact`. This will install [gulp-contact](https://www.npmjs.com/package/gulp-concat/) to your project
+3. Open /performance/begin/gulpfile.js in Visual Studio Code
+4. Add `concat = require('gulp-concat')` the to the var statement so it looks like this:
+
+```
+var gulp = require('gulp'),
+	cssmin = require('gulp-cssmin'),
+	jsmin = require('gulp-uglify'),
+  concat = require('gulp-concat');
+```
+
+5. Add `.pipe(concat('bundle.css'))` in between the two existing `.pipe` statements in the `task-cssmin` block. Whgen complete it should look like this:
+
+```
+gulp.task('task-cssmin', function() {
+  gulp.src('css/*.css')
+  .pipe(cssmin())
+  .pipe(concat('bundle.css'))
+  .pipe(gulp.dest("wwwroot/css"))
+});
+```
+
+6. Add `.pipe(concat('bundle.js'))` in between the two existing `.pipe` statements in the `task-jsmin` block. Whgen complete it should look like this:
+
+```
+gulp.task('task-jsmin', function() {
+  gulp.src('js/*.js')
+  .pipe(jsmin())
+  .pipe(concat('bundle.js'))
+  .pipe(gulp.dest("wwwroot/js"))
+});
+```
+
+7. Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles
+8. Open /performance/begin/Index.html in Visual Studio Code
+9. Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
+10. Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
+11. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow.
+
 
 ##Serve static files from Azure Storage
 Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used, so to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content.

@@ -1,8 +1,17 @@
-var gulp = require('gulp'), 
-min = require('gulp-cssmin') ; 
+var gulp = require('gulp'),
+	cssmin = require('gulp-cssmin'),
+	jsmin = require('gulp-uglify');
 
-gulp.task('hello', function() { 
-	console.log("Hello World"); 
-}); 
+gulp.task('task-cssmin', function() {
+  gulp.src('css/*.css')
+  .pipe(cssmin())
+  .pipe(gulp.dest("wwwroot/css"))
+});
 
-gulp.task("default", ['hello'])
+gulp.task('task-jsmin', function() {
+  gulp.src('js/*.js')
+  .pipe(jsmin())
+  .pipe(gulp.dest("wwwroot/js"))
+});
+
+gulp.task("default", ['task-cssmin','task-jsmin'])
