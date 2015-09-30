@@ -63,7 +63,7 @@ This site uses Bootstrap which unfortunately does use a relatively large amount 
 
 We are now using the standard CSS transition property which means that all browsers that support it will be able to use it.
 
-##6. Re-test
+##6. OPTIONAL. Re-scan the site
 If you are able to, upload the changes copy of your site and repeat step 1. You should find that the site now passes all tests in the 'Modern Web Interoperability' test
 
-You can see a copy of the site after these steps have been completed here: 
+You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/).
