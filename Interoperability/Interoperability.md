@@ -4,6 +4,8 @@ In this lab you will scan a website for modern web interoperability problems, an
 
 If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with [Azure Web App Service](https://azure.microsoft.com/en-us/services/app-service/web/) and the source integration feature, you simply commit to GitHub, VSO or whatever source control system you are using and the site gets deployed. However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
 
+Please note that there are several oddities with the code used in this lab which are not related to interoperaibility. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
+
 ##1. Scan your site
 A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
 
