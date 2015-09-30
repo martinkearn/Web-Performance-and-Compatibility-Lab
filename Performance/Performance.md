@@ -185,3 +185,5 @@ It is not within scope of this lab to talk through creating Azure Storage accoun
 
 ##That'll do for now
 This is about as far as we can take the optimisation in lab format. Further imrpovements can be made on the web server side, but they vary depending on what type of web server you are using. Sufficed to say that even with the work in this lab, the website is now signifincatly faster and better optimised that the vast majority of websites.
+
+Take the time to fully explore the reports from both YSlow and Google Page Speed now the site has been optimised. The 'Statistics' tab on YSlow is particularly satisfying.
