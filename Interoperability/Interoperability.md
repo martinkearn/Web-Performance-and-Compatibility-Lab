@@ -56,12 +56,12 @@ A CSS prefix is where a CSS property is prefixed with a vendor specific label su
 
 The report says "We've found that this webpage may have missing vendor-specific prefixes or may have implemented vendor-specific prefixes when they are not required in common CSS properties". The goal is that we avoid vendor specific prefixes wherever possible, in fact some browser such as Microsoft Edge do not even implement prefixes now and many other browser vendors are going the same route.
 
-This site uses Bootstrap which unfortunately does use a relatively large amount of vendor prefixes in the current version. However, the sites own CSS uses `-webkit-transition` to apply a hover transition effect to eth Title. There is no standard fall back which means this rule will only apply to website browsers.
+This site uses Bootstrap which unfortunately does use a relatively large amount of vendor prefixes in the current version. However, the site's own site.css uses `-webkit-cursor:zoom-in` to change the cursor to a zoom icon over the thumbnail images. There is no standard fall back which means this rule will only apply to webkit browsers (Chrome and Safari), other browsers that do support this css property such as Microsoft Edge will not be able to use it.
 
 1. Open /interoperability/begin/css/site.css in Visual Studio Code
-2. Replace `-webkit-transition: color 0.5s ease;` with `transition: color 0.5s ease;`
+2. Replace `-webkit-cursor:zoom-in` with `cursor:zoom-in`
 
-We are now using the standard CSS transition property which means that all browsers that support it will be able to use it.
+We are now using the standard CSS cursor property which means that all browsers that support it will be able to use it.
 
 ##6. OPTIONAL. Re-scan the site
 If you are able to, upload the changes copy of your site and repeat step 1. You should find that the site now passes all tests in the 'Modern Web Interoperability' test
