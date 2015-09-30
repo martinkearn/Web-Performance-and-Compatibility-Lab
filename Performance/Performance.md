@@ -85,12 +85,18 @@ The remaining YSlow suggestions all relate to optimising the delivery of static 
 ##Optimise images
 The number one complaint in Google PageSpeed is the optimisation of images. They say "Properly formatting and compressing images can save many bytes of data. Optimize the following images to reduce their size by 534.9KiB (66% reduction).".
 
-There are many tool avaliabel to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
+There are many tool avaliable to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
 
-To save time, all the referenced image have been optimised and stored in /performance/begin/optimisedimages, lets use them.
+To save time, all the referenced images have been optimised and stored in /performance/begin/optimisedimages, lets use them.
 
 1. Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
-2. (optional) If you can, publish your page and re-test with Google PageSpeed. Your score will move to 
+2. (optional) If you can, publish your page and re-test with Google PageSpeed. You'll notice that 'optimise images' is no longer an issue
+
+##Minify CSS with Gulp
+
+##Minify Javascript with Gulp
+
+##Bundle CSS and Javascript with Gulp
 
 ##Serve static files from Azure Storage
 Several of the recomendations relate to the way static files are served. The way these are addressed, depends opn the web server that is used, so to make the lab simpler, a copy of the static file have been loaded onto Azure Storage which is a superb location for storing and serving static content.
