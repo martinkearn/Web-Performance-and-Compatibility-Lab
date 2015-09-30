@@ -10,8 +10,8 @@ You can download **Visual Studio Code** for Windows, Linux and OSX from [here](h
 ##2. Have Google Chrome installed
 The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [here](https://www.google.com/chrome/index.html)
 
-##3. Clone or download content of this GitHub repository (optional but recommended)
-The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, we strongly recommend you clone (using [Git](http://git-scm.com/)) or download all content in this repository locally on your computer.
+##3. Clone or download content of this GitHub repository
+The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, you should clone (using [Git](http://git-scm.com/)) or otherwise download all content in this repository locally on your computer.
 
 ##4. OPTIONAL: Get access to Windows 10 with Microsoft Edge
 These labs work best if you have Microsoft Edge which is the default browser in Windows 10. If you are already using Windows 10, you are good to go.
