@@ -1,4 +1,4 @@
-#3.Performance Optimisation and Tuning
+#Performance Optimisation and Tuning
 
 In this lab you will learn how to analyse your site for performance issues and how to fix the most common ones.
 
