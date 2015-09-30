@@ -89,7 +89,7 @@ As well as optimising images, it is important that they are served at the size i
 
 The page displays the thumbnail images at 350px wide, but the actual images are 1920px wide.
 
-There are many tool available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
+There are many tools available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
 
 To save time, all the referenced images have been optimised, resized and stored in /performance/begin/optimisedimages, lets use them.
 
@@ -97,11 +97,24 @@ To save time, all the referenced images have been optimised, resized and stored 
 2. Open /performance/begin/Index.html in Visual Studio Code
 3. For each thumbnail DIV, change the HREF of the thumbnail A tag to have `-large` at the end. For example, change `<a href="images/Windows_Insider_Battlecat_Unicorn.png"` to `<a href="images/Windows_Insider_Battlecat_Unicorn-large.png"`
 4. For each thumbnail DIV, change the SRC of the IMG tag to have `-large` at the end. For example, change `<img src="images/Windows_Insider_Battlecat_Unicorn.png" />` to `<img src="images/Windows_Insider_Battlecat_Unicorn-large.png" />`
-5. (optional) If you can, publish your page and re-test with Google PageSpeed. You'll notice that 'optimise images' is no longer an issue
-
- 
+5. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
 
 ##Minify CSS with Gulp
+Both YSlow and Google Page speed recomend the minification of both JS and CSS files. YSlow says "Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced."
+
+To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javascript task runner and has plug-ins that perform minification tasks.
+
+1. Open a command prompt and navigate to your working folder ... {some local path}/performance/end
+2. Run `npm install gulp`. This will install Gulp to your project
+3. Run `npm install gulp-cssmin`. This will install Gulp-CSSMin plug-in to your project for CSS minification
+3. Run `npm install gulp-uglify`. This will install Gulp-Uglify plug-in to your project for JS minification
+4. Take a look at the existing gulpfile.js to get a feel for what it is doing. An explanation of Gulp is out of scope for this excersise, so if you are new to Gulp, just accept that this file controls what happens and move on! :)
+5. Back in the command prompt, run `gulp`. This will execute the Gulp tasks and minify your files
+6. Take a look at your /performance/begin/ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
+7. Open /performance/begin/Index.html in Visual Studio Code
+8. Replace all references to `css/` to `wwwroot/css/` to reference the minified CSS files
+9. Replace all references to `js/` to `wwwroot/js/` to reference the minified JS files
+10. (optional) If you can, publish your page and re-test with Google PageSpeed and YSlow
 
 ##Minify Javascript with Gulp
 
