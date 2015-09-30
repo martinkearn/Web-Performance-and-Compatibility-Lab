@@ -10,9 +10,9 @@ There are several oddities with the code used in this lab which are not related 
 A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
 
 1. Go to [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/)
-1. Enter 'http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html' as the URL and perform a scan
-1. Notice that there are several problems related to 'Modern web interoperability' (we'll ignore the other areas for now)
-1. Keep this browser page open, we'll refer to it throughout the excersise
+2. Enter 'http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html' as the URL and perform a scan
+3. Notice that there are several problems related to 'Modern web interoperability' (we'll ignore the other areas for now)
+4. Keep this browser page open, we'll refer to it throughout the excersise
 
 ##2. Render mode
 The report tells us that there is a problem with the rendering mode for the page. It says "There is an issue with this website that could force an old document mode intended for older versions of Internet Explorer".
@@ -35,11 +35,11 @@ The report says "We've found frameworks or libraries that are not up-to-date and
 
 ```<script src="js/jquery-1.8.0.min.js"></script>```
 
-1. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version avaliable. If there is, use it. The reference should now look like this: 
+2. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version avaliable. If there is, use it. The reference should now look like this: 
 
 ```<script src="js/jquery-2.1.4.min.js"></script>```
 
-1. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 ##4. Browser Detection
 Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themsevles. This kind of code was necesary years ago, but it is not required now with modern browsers.
