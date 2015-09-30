@@ -1,5 +1,5 @@
-# Web Performance and Compatibility Lab
-A lab for checking and fixing modern web interoperability (Microsoft Edge compatibility specifically but it applies to all modern browsers) issues on a simple front-end website. Also features an excersise on improving front-end performance.
+#Web Performance and Compatibility Lab
+A lab for checking and fixing modern web interoperability issues on a simple front-end website. The lab looks at Microsoft Edge specifically but the principles applies to all interoperability and compatibility with all modern browsers. Also features an exercise on improving front-end performance.
 
 Written as a front-end lab that can be executed on any operating system with any editing software, though [Visual Studio Code](https://code.visualstudio.com/) is the editor used in the instructions.
 
