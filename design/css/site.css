@@ -1,10 +1,19 @@
+.navbar-brand{
+    padding: 10px;
+    margin: 0;
+}
+
+#logo{
+    max-height: 30px;
+}
+
 .icon{
-max-height: 25px;
+    max-height: 25px;
 }
 
 .thumbnail{
 	cursor:zoom-in;
-	-webkit-cursor:zoom-in;
+	/*-webkit-cursor:zoom-in;*/
 }
 
 .modal-body img{
