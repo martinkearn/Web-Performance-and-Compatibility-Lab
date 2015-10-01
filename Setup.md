@@ -5,10 +5,10 @@ These are pre-requisite steps. You may already have som of this software on your
 ##1. Install Visual Studio Code
 These labs will use **Visual Studio Code** as the development environment for building and updating the sample web application. You can use any web text editor such as Sublime if you wish, but the instructions are written based on Visual Studio Code.
 
-You can download **Visual Studio Code** for Windows, Linux and OSX from [here](https://code.visualstudio.com/).
+You can download **Visual Studio Code** for Windows, Linux and OSX from [https://code.visualstudio.com/](https://code.visualstudio.com/).
 
 ##2. Install Google Chrome
-The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [here](https://www.google.com/chrome/index.html)
+The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [https://www.google.com/chrome](https://www.google.com/chrome/index.html)
 
 ##3. Install NodeJS
 Node is required in order to run various packages required for the Performance lab. You can install Node for your platform from [https://nodejs.org/en/](https://nodejs.org/en/).
