@@ -8,6 +8,7 @@ This lab is designed to accompany by [Martin Kearn's](http://aka.ms/martinkearn)
 This lab includes the following tasks.
 
 1. [Setup](Setup.md)
+1. Optional [Azure Setup](AzureSetup.md)
 1. [Modern web interoperability](Interoperability/Interoperability.md)
 1. [Performance optimisation and tuning](Performance/Performance.md)
 
