@@ -26,3 +26,10 @@ Do not worry if you cannot get Windows 10, it is a nice to have for this lab, no
 1. You can create a Windows 10 Virtual Machine in Azure to access via remote desktop. Get started with a free trial [here](https://azure.microsoft.com/en-us/trial/free-trial-virtual-machines/)
 
 1. If you have Windows 7 or Windows 8.1, you can probably upgrade to Windows 10 for free. Check your options [here](http://www.microsoft.com/en-gb/windows/windows-10-upgrade)
+
+##6. OPTIONAL: Get an Azure subscription and enable continuous integrateion
+These labs work best if you can publish your website somewhere as you change it. Any hosting location will work fine, but Microsoft Azure has some great features around publishing and continuous integration which make the worlflow very easy.
+
+It is optional, but if you want to setup Azure, follow the steps in this optional lab. [Azure Setup](AzureSetup.md)
+
+PS: If you do not have an Azure subcrption, dont worry you'll create a free trial as part of the lab
