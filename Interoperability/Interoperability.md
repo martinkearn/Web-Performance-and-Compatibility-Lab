@@ -10,14 +10,18 @@ There are several oddities with the code used in this lab which are not related 
 A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
 
 1.Go to [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/)
+
 2.Enter 'http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html' as the URL and perform a scan
+
 3.Notice that there are several problems related to 'Modern web interoperability' (we'll ignore the other areas for now)
+
 4.Keep this browser page open, we'll refer to it throughout the exercise
 
 ##2. Render mode
 The report tells us that there is a problem with the rendering mode for the page. It says "There is an issue with this website that could force an old document mode intended for older versions of Internet Explorer".
 
 1.Open /interoperability/begin/index.html in Visual Studio Code
+
 2.Identify the line that looks like the following and remove it: 
 
 ```<meta http-equiv="x-ua-compatible" content="IE=8">```
@@ -47,6 +51,7 @@ Browser detection is when web pages detect specific browser versions and make as
 The report says "We've found that this webpage may be using browser detection techniques to determine how the webpage should render across many different versions of browsers".  The offending code is in site.js where we check for the presence  of Internet Explorer with `if (navigator.userAgent.indexOf("MSIE") > 0)`. If we find that the site is in IE, we replace the SVG (not supported by older versions of IE) with a PNG. As suggested by the report, we'll fix this with Modernizr.
 
 1.Open /interoperability/begin/js/site.js in Visual Studio Code
+
 2.Replace the full content of the file with this code
 
 ```
@@ -67,7 +72,9 @@ The report says "We've found that this webpage may have missing vendor-specific 
 This site uses Bootstrap which unfortunately does use a relatively large amount of vendor prefixes in the current version. However, the site's own site.css uses `-webkit-cursor:zoom-in` to change the cursor to a zoom icon over the thumbnail images. There is no standard fall back which means this rule will only apply to webkit browsers (Chrome and Safari), other browsers that do support this css property such as Microsoft Edge will not be able to use it.
 
 1.Open /interoperability/begin/css/site.css in Visual Studio Code
+
 2.Replace `-webkit-cursor:zoom-in` with `cursor:zoom-in`
+
 3.(optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 We are now using the standard CSS cursor property which means that all browsers that support it will be able to use it.
