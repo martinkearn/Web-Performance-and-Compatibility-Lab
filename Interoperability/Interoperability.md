@@ -85,5 +85,3 @@ If you are able to, upload the changes copy of your site and repeat step 1. You 
 You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/).
 
 Note: The site will still fail the CSS prefixes test but these failures are caused by Bootstrap and is therefore out of your control.
-
-##7. Proceed to the [Performance optimisation and tuning exercise](Performance/Performance.md)
