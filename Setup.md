@@ -1,19 +1,19 @@
 # Setup
 
-These are pre-requisiste steps which you may or may not have have completed on your machine.
+These are pre-requisite steps. You may already have som of this software on your machine, but this is a chance to double check you have what you need..
 
 ##1. Install Visual Studio Code
 These labs will use **Visual Studio Code** as the development environment for building and updating the sample web application. You can use any web text editor such as Sublime if you wish, but the instructions are written based on Visual Studio Code.
 
 You can download **Visual Studio Code** for Windows, Linux and OSX from [here](https://code.visualstudio.com/).
 
-##2. Have Google Chrome installed
+##2. Install Google Chrome
 The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [here](https://www.google.com/chrome/index.html)
 
 ##3. Clone or download content of this GitHub repository
 The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, you should clone (using [Git](http://git-scm.com/)) or otherwise download all content in this repository locally on your computer.
 
-##4. Have Node installed
+##4. Install NodeJS
 Node is required in order to run various packages required for the Performance lab. You can install Node for your platform from [https://nodejs.org/en/](https://nodejs.org/en/).
 
 ##5. OPTIONAL: Get access to Windows 10 with Microsoft Edge
