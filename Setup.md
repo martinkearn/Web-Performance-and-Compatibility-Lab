@@ -1,4 +1,4 @@
-# Setup
+#Setup
 
 These are pre-requisite steps. You may already have som of this software on your machine, but this is a chance to double check you have what you need..
 
@@ -10,18 +10,18 @@ You can download **Visual Studio Code** for Windows, Linux and OSX from [here](h
 ##2. Install Google Chrome
 The labs will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [here](https://www.google.com/chrome/index.html)
 
-##3. Clone or download content of this GitHub repository
-The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, you should clone (using [Git](http://git-scm.com/)) or otherwise download all content in this repository locally on your computer.
-
-##4. Install NodeJS
+##3. Install NodeJS
 Node is required in order to run various packages required for the Performance lab. You can install Node for your platform from [https://nodejs.org/en/](https://nodejs.org/en/).
+
+##4. Clone or download content of this GitHub repository
+The labs provided have a combination of text documentation and sample code. In order to have all documentation and necessary sample files locally on your computer, you should clone (using [Git](http://git-scm.com/)) or otherwise download all content in this repository locally on your computer.
 
 ##5. OPTIONAL: Get access to Windows 10 with Microsoft Edge
 These labs work best if you have Microsoft Edge which is the default browser in Windows 10. If you are already using Windows 10, you are good to go.
 
 Do not worry if you cannot get Windows 10, it is a nice to have for this lab, not mandatory. If you would like to test Microsoft Edge out, there are a few options depending on what type of machine you are using:
 
-1. You can download a Virtual Machine with Windows 10 and Edge for free from the [Microsoft Edge Dev portal](https://dev.modern.ie/tools/vms/windows/). All the main Virtual Machine and OS combinations are avaliable.
+1. You can download a Virtual Machine with Windows 10 and Edge for free from the [Microsoft Edge Dev portal](https://dev.modern.ie/tools/vms/windows/). All the main Virtual Machine and OS combinations are available.
 
 1. You can create a Windows 10 Virtual Machine in Azure to access via remote desktop. Get started with a free trial [here](https://azure.microsoft.com/en-us/trial/free-trial-virtual-machines/)
 
