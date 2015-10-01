@@ -196,9 +196,13 @@ gulp.task('task-jsmin', function() {
 ```
 
 9.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles
+
 10.Open /performance/begin/Index.html in Visual Studio Code
+
 11.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/css/bundle.css" rel="stylesheet">`
+
 12.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
+
 13.(optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100
 
 ##Serve static files from Azure Storage
