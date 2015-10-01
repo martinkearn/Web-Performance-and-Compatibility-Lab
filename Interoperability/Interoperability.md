@@ -2,9 +2,9 @@
 
 In this lab you will scan a website for modern web interoperability problems, and then fix them.
 
-If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with [Azure Web App Service](https://azure.microsoft.com/en-us/services/app-service/web/) and the source integration feature, you simply commit to GitHub, VSO or whatever source control system you are using and the site gets deployed. However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
+If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with [Azure Web App Service](https://azure.microsoft.com/en-us/services/app-service/web/) and the source integration feature, you simply commit to GitHub, VSO or any major source control system and the site gets deployed. However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
 
-There are several oddities with the code used in this lab which are not related to interoperaibility. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
+There are several oddities with the code used in this lab which are not related to interoperability. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
 
 ##1. Scan your site
 A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
@@ -12,7 +12,7 @@ A copy of the site in the /begin folder for this lab has been published to the f
 1. Go to [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/)
 2. Enter 'http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html' as the URL and perform a scan
 3. Notice that there are several problems related to 'Modern web interoperability' (we'll ignore the other areas for now)
-4. Keep this browser page open, we'll refer to it throughout the excersise
+4. Keep this browser page open, we'll refer to it throughout the exercise
 
 ##2. Render mode
 The report tells us that there is a problem with the rendering mode for the page. It says "There is an issue with this website that could force an old document mode intended for older versions of Internet Explorer".
@@ -24,7 +24,7 @@ The report tells us that there is a problem with the rendering mode for the page
 
 3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
-This code forces the browser to try and render in IE8 mode which cuases several comaptibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
+This code forces the browser to try and render in IE8 mode which causes several compatibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
 
 ##3. Frameworks and Libraries
 One of the biggest causes for compatibility problems in most modern browsers is use of old libraries and frameworks. As libraries evolve, they are updated to work with modern browsers and some of the old hacks required for older browsers are removed so you should always try to use the latest versions of libraries and frameworks where possible, to make sure you have the very latest compatibility and interoperability fixes from the vendor.
@@ -35,16 +35,16 @@ The report says "We've found frameworks or libraries that are not up-to-date and
 
 ```<script src="js/jquery-1.8.0.min.js"></script>```
 
-2. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version avaliable. If there is, use it. The reference should now look like this: 
+2. Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version available. If there is, use it. The reference should now look like this: 
 
 ```<script src="js/jquery-2.1.4.min.js"></script>```
 
 3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 ##4. Browser Detection
-Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themsevles. This kind of code was necesary years ago, but it is not required now with modern browsers.
+Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themselves. This kind of code was necessary years ago, but it is not required now with modern browsers.
 
-The report says "We've found that this webpage may be using browser detection techniques to determine how the webpage should render across many different versions of browsers".  The offending code is in site.js where we check for the prescence of ie with `if (navigator.userAgent.indexOf("MSIE") > 0)`. If we find that the site is in IE, we replace the SVG (not supported by older versions of IE) with a PNG. As suggested by the report, we'll fix this with Modernizr.
+The report says "We've found that this webpage may be using browser detection techniques to determine how the webpage should render across many different versions of browsers".  The offending code is in site.js where we check for the presence  of Internet Explorer with `if (navigator.userAgent.indexOf("MSIE") > 0)`. If we find that the site is in IE, we replace the SVG (not supported by older versions of IE) with a PNG. As suggested by the report, we'll fix this with Modernizr.
 
 1. Open /interoperability/begin/js/site.js in Visual Studio Code
 2. Replace the full content of the file with this code
@@ -57,7 +57,7 @@ if (!Modernizr.svg) {
 
 3. (optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
-This is a very simple example of how to do feature detetcion with Modernizr via Javascript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivilent.
+This is a very simple example of how to do feature detection with Modernizr via JavaScript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivalent.
 
 ##5. CSS prefixes
 A CSS prefix is where a CSS property is prefixed with a vendor specific label such as -webkit- or -ms-. Prefixes are used by browser vendors to implement early versions of CSS properties as they emerge. Eventually, if a CSS property becomes part of the standard it will be available without the prefix.
@@ -77,6 +77,6 @@ If you are able to, upload the changes copy of your site and repeat step 1. You 
 
 You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/).
 
-Note: The site will still fail the CSS prefixes test but these failure are caused by Bootstrap and is therefore out of your control.
+Note: The site will still fail the CSS prefixes test but these failures are caused by Bootstrap and is therefore out of your control.
 
-##7. Proceed to the [Performance optimisation and tuning excersise](Performance/Performance.md)
+##7. Proceed to the [Performance optimisation and tuning exercise](Performance/Performance.md)
