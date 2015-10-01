@@ -1,6 +1,6 @@
 #Setup
 
-These are pre-requisite steps. You may already have som of this software on your machine, but this is a chance to double check you have what you need..
+These are pre-requisite steps. You may already have some of this software on your machine, but this is a chance to double check you have what you need..
 
 ##1. Install Visual Studio Code
 These labs will use **Visual Studio Code** as the development environment for building and updating the sample web application. You can use any web text editor such as Sublime if you wish, but the instructions are written based on Visual Studio Code.
@@ -32,4 +32,4 @@ These labs work best if you can publish your website somewhere as you change it.
 
 It is optional, but if you want to setup Azure, follow the steps in this optional lab. [Azure Setup](AzureSetup.md)
 
-PS: If you do not have an Azure subcrption, dont worry you'll create a free trial as part of the lab
+PS: If you do not have an Azure subcrption, dont worry you can create a free trial as part of the lab
