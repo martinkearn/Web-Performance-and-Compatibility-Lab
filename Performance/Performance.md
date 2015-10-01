@@ -144,7 +144,7 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 ##Bundle CSS and Javascript files with Gulp
 Now that we have minified our CSS and JS files, we need to bundle them together to reduce the number of requests required. YSlow says "Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.".
 
-Again, we'll use a nfew Gulp plug-in for this task; [gulp-contact](https://www.npmjs.com/package/gulp-concat/) and [gulp-gzip](https://www.npmjs.com/package/gulp-gzip/)
+Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.npmjs.com/package/gulp-concat/) and [gulp-gzip](https://www.npmjs.com/package/gulp-gzip/)
 
 1.Open a command prompt and navigate to your working folder ... {some local path}/performance/end
 
