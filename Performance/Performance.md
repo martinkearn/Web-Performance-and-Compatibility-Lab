@@ -195,7 +195,7 @@ gulp.task('task-jsmin', function() {
 });
 ```
 
-9.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles
+9.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles. They are /js/bundle.js and /css/bundle.css.
 
 10.Open /performance/begin/Index.html in Visual Studio Code
 
