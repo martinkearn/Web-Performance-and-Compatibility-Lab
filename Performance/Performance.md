@@ -148,9 +148,9 @@ Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.np
 
 1.Open a command prompt and navigate to your working folder ... {some local path}/performance/end
 
-2.Run `npm install gulp-contact`. This will install [gulp-contact](https://www.npmjs.com/package/gulp-concat/) to your project
+2.Run `npm install gulp-concat`. This will install [gulp-concat](https://www.npmjs.com/package/gulp-concat/) to your project
 
-3.Run `npm install gulp-gzip`. This will install [gulp-contact](https://www.npmjs.com/package/gulp-concat/) to your project
+3.Run `npm install gulp-gzip`. This will install [gulp-gzip](https://www.npmjs.com/package/gulp-gzip/) to your project
 
 4.Open /performance/begin/gulpfile.js in Visual Studio Code
 
