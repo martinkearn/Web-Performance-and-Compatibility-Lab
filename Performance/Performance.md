@@ -2,7 +2,7 @@
 
 In this lab you will learn how to analyse your site for performance issues and how to fix the most common ones.
 
-If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with [Azure Web App Service](https://azure.microsoft.com/en-us/services/app-service/web/) and the source integration feature, you simply commit to GitHub, VSO or whatever source control system you are using and the site gets deployed. However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
+Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setup](AzureSetup.md) labs before continuing.
 
 ##Analyse with YSlow
 YSlow is a tool from Yahoo that analyses a site against Yahoo's own web performance rule set. YSlow is a well established industry benchmark for web site performance.
@@ -106,13 +106,57 @@ To save time, all the referenced images have been optimised, resized and stored 
 
 1.Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
 
-2.Open /performance/begin/Index.html in Visual Studio Code
+1.Open /performance/begin/Index.html in Visual Studio Code
 
-3.For each thumbnail DIV, change the HREF of the thumbnail A tag to have `-large` at the end. For example, change `<a href="images/Windows_Insider_Battlecat_Unicorn.png"` to `<a href="images/Windows_Insider_Battlecat_Unicorn-large.png"`
+1.Replace the A tag with the ID of 'thumbnail-unicorn' with this code:
 
-4.For each thumbnail DIV, change the SRC of the IMG tag to have `-large` at the end. For example, change `<img src="images/Windows_Insider_Battlecat_Unicorn.png" />` to `<img src="images/Windows_Insider_Battlecat_Unicorn-large.png" />`
+```
+<a id="thumbnail-unicorn" href="images/Windows_Insider_Battlecat_Unicorn-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="images/Windows_Insider_Battlecat_Unicorn.png" /></a>
+```
 
-5.(optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
+1.Replace the IMG tag with the ID of 'largeimage-unicorn' with this code:
+
+```
+<img id="largeimage-unicorn" src="images/Windows_Insider_Battlecat_Unicorn-large.png" />
+```
+
+1.Replace the A tag with the ID of 'thumbnail-narwhal' with this code:
+
+```
+<a id="thumbnail-narwhal" href="images/Windows_Insider_Battlecat_Narwhal-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" /></a>
+```
+
+1.Replace the IMG tag with the ID of 'largeimage-narwhal' with this code:
+
+```
+<img id="largeimage-narwhal" src="images/Windows_Insider_Battlecat_Narwhal-large.png" />
+```
+
+1.Replace the A tag with the ID of 'thumbnail-trex' with this code:
+
+```
+<a id="thumbnail-trex" href="images/Windows_Insider_Battlecat_Trex-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="images/Windows_Insider_Battlecat_Trex.png" /></a>
+```
+
+1.Replace the IMG tag with the ID of 'largeimage-trex' with this code:
+
+```
+<img id="largeimage-trex" src="images/Windows_Insider_Battlecat_Trex-large.png" />
+```
+
+1.Replace the A tag with the ID of 'thumbnail-welcome' with this code:
+
+```
+<a id="thumbnail-welcome" href="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-large.jpg" class="thumbnail" data-toggle="modal" data-target="#WelcomeToTheInternet"><img src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" /></a>
+```
+
+1.Replace the IMG tag with the ID of 'largeimage-welcome' with this code:
+
+```
+<img id="largeimage-welcome" src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-large.jpg" />
+```
+
+1.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
 
 ##Minify CSS and Javascript files with Gulp
 Both YSlow and Google Page speed recomend the minification of both JS and CSS files. YSlow says "Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced."
@@ -139,7 +183,7 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 
 9.Replace all references to `js/` to `wwwroot/js/` to reference the minified JS files
 
-10.(optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. The scores will not change by much because of the relatively low number of CSS and JS files. Howeve rin a real world project this would have a bigger impact.
+10.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. The scores will not change by much because of the relatively low number of CSS and JS files. Howeve rin a real world project this would have a bigger impact.
 
 ##Bundle CSS and Javascript files with Gulp
 Now that we have minified our CSS and JS files, we need to bundle them together to reduce the number of requests required. YSlow says "Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.".
@@ -203,7 +247,7 @@ gulp.task('task-jsmin', function() {
 
 12.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
 
-13.(optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100
+13.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100
 
 ##Serve static files from Azure Storage
 Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used. So to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content. The files have all been configured with Expires headers and because they are stored in Azure Storage the YSlow ETags and Cookie-less domains rules will also now pass.
@@ -218,7 +262,7 @@ It is not within scope of this lab to talk through creating Azure Storage accoun
 
 4.Replace all references to `images/` with `https://ninjacatgallery.blob.core.windows.net/static/`
 
-5.(optional) If you can, publish your page and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'.
+5.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'.
 
 ##That'll do for now
 This is about as far as we can take the optimisation in lab format. Further imrpovements can be made on the web server side, but they vary depending on what type of web server you are using. Sufficed to say that even with the work in this lab, the website is now signifincatly faster and better optimised that the vast majority of websites.
