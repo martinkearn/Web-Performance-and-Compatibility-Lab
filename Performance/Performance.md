@@ -113,49 +113,49 @@ To save time, all the referenced images have been optimised, resized and stored 
 3.Replace the A tag with the ID of 'thumbnail-unicorn' with this code:
 
 ```
-<a id="thumbnail-unicorn" href="images/Windows_Insider_Battlecat_Unicorn-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="images/Windows_Insider_Battlecat_Unicorn.png" alt="The ninja cat on a unicorn" /></a>
+<a id="thumbnail-unicorn" href="images/Windows_Insider_Battlecat_Unicorn-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="images/Windows_Insider_Battlecat_Unicorn.png" alt="The ninja cat on a unicorn" /></a>
 ```
 
 4.Replace the IMG tag with the ID of 'largeimage-unicorn' with this code:
 
 ```
-<img id="largeimage-unicorn" src="images/Windows_Insider_Battlecat_Unicorn-large.png" alt="The ninja cat on a unicorn" />
+<img id="largeimage-unicorn" src="images/Windows_Insider_Battlecat_Unicorn-Large.png" alt="The ninja cat on a unicorn" />
 ```
 
 5.Replace the A tag with the ID of 'thumbnail-narwhal' with this code:
 
 ```
-<a id="thumbnail-narwhal" href="images/Windows_Insider_Battlecat_Narwhal-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" alt="The ninja cat on a narwhal" /></a>
+<a id="thumbnail-narwhal" href="images/Windows_Insider_Battlecat_Narwhal-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" alt="The ninja cat on a narwhal" /></a>
 ```
 
 6.Replace the IMG tag with the ID of 'largeimage-narwhal' with this code:
 
 ```
-<img id="largeimage-narwhal" src="images/Windows_Insider_Battlecat_Narwhal-large.png" alt="The ninja cat on a narwhal" />
+<img id="largeimage-narwhal" src="images/Windows_Insider_Battlecat_Narwhal-Large.png" alt="The ninja cat on a narwhal" />
 ```
 
 7.Replace the A tag with the ID of 'thumbnail-trex' with this code:
 
 ```
-<a id="thumbnail-trex" href="images/Windows_Insider_Battlecat_Trex-large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="images/Windows_Insider_Battlecat_Trex.png" alt="The ninja cat on a trex" /></a>
+<a id="thumbnail-trex" href="images/Windows_Insider_Battlecat_Trex-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="images/Windows_Insider_Battlecat_Trex.png" alt="The ninja cat on a trex" /></a>
 ```
 
 8.Replace the IMG tag with the ID of 'largeimage-trex' with this code:
 
 ```
-<img id="largeimage-trex" src="images/Windows_Insider_Battlecat_Trex-large.png" alt="The ninja cat on a trex" />
+<img id="largeimage-trex" src="images/Windows_Insider_Battlecat_Trex-Large.png" alt="The ninja cat on a trex" />
 ```
 
 9.Replace the A tag with the ID of 'thumbnail-welcome' with this code:
 
 ```
-<a id="thumbnail-welcome" href="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-large.jpg" class="thumbnail" data-toggle="modal" data-target="#WelcomeToTheInternet"><img src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" alt="The original welcome to the internet image" /></a>
+<a id="thumbnail-welcome" href="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" class="thumbnail" data-toggle="modal" data-target="#WelcomeToTheInternet"><img src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" alt="The original welcome to the internet image" /></a>
 ```
 
 10.Replace the IMG tag with the ID of 'largeimage-welcome' with this code:
 
 ```
-<img id="largeimage-welcome" src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-large.jpg" alt="The original welcome to the internet image" />
+<img id="largeimage-welcome" src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" alt="The original welcome to the internet image" />
 ```
 
 11.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
