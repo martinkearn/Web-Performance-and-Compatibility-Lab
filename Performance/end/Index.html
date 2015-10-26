@@ -7,10 +7,16 @@
   <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <meta name="description" content="">
   <meta name="author" content="">
+  <link rel="prerender" href="/index.html" />
+  <link rel="prefetch" href="/index.html" />
+  <link rel="next" href="/index.html"/>
+  <link rel="prev" href="/index.html"/>
+  <meta name="msapplication-TileColor" content="#000000"/>
+  <meta name="msapplication-square150x150logo" content="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Ninjacat_Unicorn-Square_150.png"/>
 
   <title>Ninja Cat Gallery</title>
- 
-  <link href="https://ninjacatgallery.blob.core.windows.net/static/bundle.css" rel="stylesheet">
+  
+  <link href="https://ninjacatgallery.blob.core.windows.net/static/bundle.css" rel="stylesheet"> 
 </head>
 
 <body>
@@ -25,7 +31,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#"><img id="logo" src="https://ninjacatgallery.blob.core.windows.net/static/Microsoft_logo.svg" /></a>
+        <a class="navbar-brand" href="#"><img id="logo" src="images/Microsoft_logo.svg" alt="The Microsoft logo" /></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
@@ -59,7 +65,9 @@
         <h3>Ninja Cat on Unicorn</h3>
         <p>This is the original artwork released from Microsoft. It features a brown ninja cat riding a white unicorn in a proud
           upright stance whilst waving a Microsoft flag.</p>
-        <a href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn.png" /></a>
+        
+        <a id="thumbnail-unicorn" href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn.png" alt="The ninja cat on a unicorn" /></a>
+
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnUnicorn" tabindex="-1" role="dialog">
           <div class="modal-dialog modal-lg" role="document">
@@ -69,7 +77,8 @@
                 <h4 class="modal-title" id="myModalLabel">Ninja cat on Unicorn</h4>
               </div>
               <div class="modal-body">
-                <img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn-Large.png" />
+                <img id="largeimage-unicorn" src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Unicorn-Large.png" alt="The ninja cat on a unicorn" />
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -82,7 +91,8 @@
         <h3>Ninja cat on Narwhal</h3>
         <p>This variation features the brown ninja cat adopting a low slung position riding a narwhal whale. The whale itself
           has an interesting addition of some bacon on its spear.</p>
-        <a href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal.png" /></a>
+
+        <a id="thumbnail-narwhal" href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal.png" alt="The ninja cat on a narwhal" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnNarwhal" tabindex="-1" role="dialog">
@@ -93,7 +103,8 @@
                 <h4 class="modal-title" id="myModalLabel">Ninja cat on Narwhal</h4>
               </div>
               <div class="modal-body">
-                <img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal-Large.png" />
+                <img id="largeimage-narwhal" src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Narwhal-Large.png" alt="The ninja cat on a narwhal" />
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -107,7 +118,7 @@
         <p>This variation features a ginger ninja cat adopting the low slung style whilst riding a TRex. The TRex curiously
           appears to be in possesion of some rubbish pickers.</p>
 
-        <a href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex.png" /></a>
+        <a id="thumbnail-trex" href="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex.png" alt="The ninja cat on a trex" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="NinjacatOnTRex" tabindex="-1" role="dialog">
@@ -118,7 +129,8 @@
                 <h4 class="modal-title" id="myModalLabel">Ninja cat on TRex</h4>
               </div>
               <div class="modal-body">
-                <img src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex-Large.png" />
+                <img id="largeimage-trex" src="https://ninjacatgallery.blob.core.windows.net/static/Windows_Insider_Battlecat_Trex-Large.png" alt="The ninja cat on a trex" />
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -133,8 +145,7 @@
           This has a slightly more sinister feel in that the cat has a golden handgun to compliment the unicorn's fire. It
           is set against a backdrop of a pixelatted world featuring a raindbows, fire and a small sprite.</p>
 
-        <a href="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" class="thumbnail" data-toggle="modal"
-        data-target="#WelcomeToTheInternet"><img src="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" /></a>
+        <a id="thumbnail-welcome" href="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" class="thumbnail" data-toggle="modal" data-target="#WelcomeToTheInternet"><img src="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" alt="The original welcome to the internet image" /></a>
 
         <!-- Modal -->
         <div class="modal fade" id="WelcomeToTheInternet" tabindex="-1" role="dialog">
@@ -145,7 +156,8 @@
                 <h4 class="modal-title" id="myModalLabel">Welcome to the Internet</h4>
               </div>
               <div class="modal-body">
-                <img src="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" />
+                <img id="largeimage-welcome" src="https://ninjacatgallery.blob.core.windows.net/static/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" alt="The original welcome to the internet image" />
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -161,7 +173,7 @@
       </div>
       <div class="col-md-4">
         <h3>Create your own</h3>
-        <p>You can download more images in various sizes and formats as well as creating your own ninja cat combinations. All
+        <p>You can download more https://ninjacatgallery.blob.core.windows.net/static in various sizes and formats as well as creating your own ninja cat combinations. All
           the details are in the <a href="http://blogs.windows.com/bloggingwindows/2015/07/21/a-fun-surprise-for-windows-insiders/">A fun surprise for Windows Insiders…</a>          blog article posted on the Blogging WIndows site just ahead of the Windows 10 launch.</p>
       </div>
     </div>
@@ -180,7 +192,7 @@
     <div class="row">
       <div class="col-md-12">
         <h2><a name="contact"></a>Contact</h2>
-        <p>This website is designed and maintained by Martin Kearn form Microsoft UK. Contact Martin via any of the following
+        <p>This website is designed and maintained by Martin Kearn from Microsoft UK. Contact Martin via any of the following
           channels:</p>
         <ul class="list-unstyled">
           <li>
@@ -196,9 +208,9 @@
 
   </div>
   <!-- /container -->
-  
-  <script src="https://ninjacatgallery.blob.core.windows.net/static/bundle.js"></script>
 
+  <script src="https://ninjacatgallery.blob.core.windows.net/static/bundle.js"></script> 
+  
 </body>
 
 </html>

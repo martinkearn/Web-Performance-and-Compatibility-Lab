@@ -4,6 +4,7 @@
 }
 
 #logo{
+    height: 30px;
     max-height: 30px;
 }
 
@@ -12,7 +13,7 @@
 }
 
 .thumbnail{
-	cursor:zoom-in;
+	-cursor:zoom-in;
 }
 
 .modal-body img{
