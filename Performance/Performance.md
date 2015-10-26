@@ -252,7 +252,7 @@ It is not within scope of this lab to talk through creating Azure Storage accoun
 
 3.Replace all references to `images/` with `https://ninjacatgallery.blob.core.windows.net/static/`
 
-4.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'. You shoudl now see scores of 
+4.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'. You should now see scores of 97/100 on YSlow
 
 ##That'll do for now
 This is about as far as we can take the optimisation in lab format. Further imrpovements can be made on the web server side, but they vary depending on what type of web server you are using. Sufficed to say that even with the work in this lab, the website is now signifincatly faster and better optimised that the vast majority of websites.
