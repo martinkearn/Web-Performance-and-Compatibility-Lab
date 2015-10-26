@@ -169,7 +169,7 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 
 2.Run `npm install gulp`. This will install [Gulp](http://gulpjs.com) to your project
 
-3.Run `npm install gulp-cssmin`. This will install [Gulp-CSSMin](https://www.npmjs.com/package/gulp-cssmin) plug-in to your project for CSS minification
+3.Run `npm install gulp-minify-css`. This will install [Gulp-Minify-Css](https://www.npmjs.com/package/gulp-minify-css/) plug-in to your project for CSS minification
 
 3.Run `npm install gulp-uglify`. This will install [Gulp-Uglify](https://www.npmjs.com/package/gulp-uglify/) plug-in to your project for JS minification
 

@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-	cssmin = require('gulp-cssmin'),
+	cssmin = require('gulp-minify-css'),
 	jsmin = require('gulp-uglify');
 
 gulp.task('task-cssmin', function() {

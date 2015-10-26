@@ -1,5 +1,5 @@
 var gulp = require('gulp'),
-	cssmin = require('gulp-cssmin'),
+	cssmin = require('gulp-minify-css'),
 	jsmin = require('gulp-uglify'),
   concat = require('gulp-concat'),
   gzip = require('gulp-gzip');
