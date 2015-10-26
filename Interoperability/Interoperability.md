@@ -28,7 +28,7 @@ The report tells us that there is a problem with the rendering mode for the page
 
 ```<meta http-equiv="x-ua-compatible" content="IE=8">```
 
-3.(optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 This code forces the browser to try and render in IE8 mode which causes several compatibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
 
