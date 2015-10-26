@@ -216,7 +216,7 @@ gulp.task('task-cssmin', function() {
   gulp.src('css/*.css')
   .pipe(cssmin())
   .pipe(concat('bundle.css'))
-  .pipe(gulp.dest("wwwroot/css"))
+  .pipe(gulp.dest("wwwroot"))
 });
 ```
 
@@ -227,17 +227,17 @@ gulp.task('task-jsmin', function() {
   gulp.src('js/*.js')
   .pipe(jsmin())
   .pipe(concat('bundle.js'))  
-  .pipe(gulp.dest("wwwroot/js"))
+  .pipe(gulp.dest("wwwroot"))
 });
 ```
 
-8.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles. They are /js/bundle.js and /css/bundle.css.
+8.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles in the /wwwroot folder. They are bundle.js and bundle.css.
 
 9.Open /performance/begin/Index.html in Visual Studio Code
 
-10.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/css/bundle.css" rel="stylesheet">`
+10.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
 
-11.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
+11.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/bundle.js"></script>`
 
 12.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100 and your Google Pagespeed Insights scores will now be 80/100 and 90/100.
 
@@ -248,13 +248,11 @@ It is not within scope of this lab to talk through creating Azure Storage accoun
 
 1.Open /performance/begin/Index.html in Visual Studio Code
 
-2.Replace all references to `wwwroot/css/` with `https://ninjacatgallery.blob.core.windows.net/static/`
+2.Replace all references to `wwwroot/` with `https://ninjacatgallery.blob.core.windows.net/static/`
 
-3.Replace all references to `wwwroot/js/` with `https://ninjacatgallery.blob.core.windows.net/static/`
+3.Replace all references to `images/` with `https://ninjacatgallery.blob.core.windows.net/static/`
 
-4.Replace all references to `images/` with `https://ninjacatgallery.blob.core.windows.net/static/`
-
-5.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'.
+4.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. In YSlow, you can now add 'ninjacatgallery.blob.core.windows.net' as a CDN under the 'Use a Content Delivery Network (CDN)'. You shoudl now see scores of 
 
 ##That'll do for now
 This is about as far as we can take the optimisation in lab format. Further imrpovements can be made on the web server side, but they vary depending on what type of web server you are using. Sufficed to say that even with the work in this lab, the website is now signifincatly faster and better optimised that the vast majority of websites.
