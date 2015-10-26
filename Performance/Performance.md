@@ -59,7 +59,7 @@ According to YSlow, Javascript references should be at the bottom of the page. Y
 ``` 
 3.Move this code to be located at the bottom of the BODY section, just before the closing `</body>` line 
 
-4.Commit your changes, wait for Azure to auto-deploy, then re-test with YSlow. Your score will move to 82/100.
+4.Commit your changes, wait for Azure to auto-deploy, then re-test with YSlow. Your score will remain at 81/100 but you'll now pass the 'Put Javascript at bottom' test.
 
 ##Replace the Twitter icon with a font
 This one is not picked up by YSlow because we are only using one icon in this page, but most websites use a large number of small images for icons (twitter, add to cart, contact etc). 
@@ -76,7 +76,7 @@ Font awesome is already part of the project, lets use it.
 <a href="http://twitter.com/martinkearn"><img class="icon" src="images/twitter.png" /> @MartinKearn</a>
 ```
 
-3.Replace the IMG element with this `<i class="fa fa-twitter fa-lg"></i>`. The finished code should look like:
+3.Replace the IMG element with this `<i class="fa fa-twitter fa-lg"></i>`. The finished line should look like:
 
 ```
 <a href="http://twitter.com/martinkearn"><i class="fa fa-twitter fa-lg"></i> @MartinKearn</a>
