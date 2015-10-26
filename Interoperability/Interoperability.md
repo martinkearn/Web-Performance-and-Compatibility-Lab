@@ -9,11 +9,15 @@ There are several oddities with the code used in this lab which are not related 
 Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setup](AzureSetup.md) labs before continuing.
 
 ##1. Scan your site
-A copy of the site in the /begin folder for this lab has been published to the following location: [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). We will scan this page for modern web interoperability problems.
+Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to http://{your azure web site url}/interoperability/begin/index.html. For the rest of this labe we'll refer to that url as 'Your Url'.
+
+If you have not been able to use Azure, you can see a copy of the site at [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). You can use this as your URL if you cannot use azure.
+
+We will now scan the site for modern web interoperability problems.
 
 1.Go to [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/)
 
-2.Enter 'http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html' as the URL and perform a scan
+2.Enter your URL and perform a scan
 
 3.Notice that there are several problems related to 'Modern web interoperability'.
 
@@ -41,7 +45,7 @@ The report says "We've found frameworks or libraries that are not up-to-date and
 
 ```<script src="js/jquery-1.8.0.min.js"></script>```
 
-2.Change the reference to 'js/jquery-2.1.4.min.js'. This file is already included in the project but there may be a newer version available. If there is, use it. The reference should now look like this: 
+2.Change the reference to 'js/jquery-2.1.4.min.js' (don't worry about this being in the HEAD section for now). This file is already included in the project but there may be a newer version available. If there is, use it. The reference should now look like this: 
 
 ```<script src="js/jquery-2.1.4.min.js"></script>```
 
@@ -77,11 +81,11 @@ This site uses Bootstrap which unfortunately does use a relatively large amount 
 
 2.Replace `-webkit-cursor:zoom-in` with `cursor:zoom-in`
 
-We can now using the standard CSS 'cursor' property which means that all browsers that support it will be able to use it. If the -webkit prefix was left in, only webkit browser woudl support it
-
 3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). The site will still fail the CSS prefixes test but these failures are caused by Bootstrap and is therefore out of your control. If you examine the list of selectors, you'll see that they are all coming from Bootstrap and not your own CSS.
 
 ##6. You're done. move on to the next lab
 This lab is complete.
 
-You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/). It should pass all of the 'Modern web interoperability' tests apart from CSS which fails on Bootstrap and is out of your control.
+You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/). 
+
+It should pass all of the 'Modern web interoperability' tests apart from CSS which fails on Bootstrap and is out of your control.
