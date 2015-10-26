@@ -158,14 +158,14 @@ To save time, all the referenced images have been optimised, resized and stored 
 <img id="largeimage-welcome" src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" alt="The original welcome to the internet image" />
 ```
 
-11.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 86/100 for desktop. The YSlow score will be at Grade B, 81.
+11.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 87/100 for desktop. The YSlow score will be at Grade B, 81.
 
 ##Minify CSS and Javascript files with Gulp
 Both YSlow and Google Page speed recomend the minification of both JS and CSS files. YSlow says "Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced."
 
 To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javascript task runner and has plug-ins that perform minification tasks.
 
-1.Open a command prompt and navigate to your working folder ... {some local path}/performance/end
+1.Open a command prompt with administrative priviledge and navigate to your working folder ... {some local path}/performance/begin
 
 2.Run `npm install gulp`. This will install [Gulp](http://gulpjs.com) to your project
 
@@ -175,17 +175,17 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 
 4.Take a look at the existing gulpfile.js to get a feel for what it is doing. An explanation of Gulp is out of scope for this excersise, so if you are new to Gulp, just accept that this file controls what happens and move on! :)
 
-5.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and minify your files
+5.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and minify your files. If you have any issue running gulp, make sure you NODE_PATH is setup correctly; [have a look at this article](http://stackoverflow.com/questions/24027551/gulp-command-not-found-error-after-installing-gulp)
 
 6.Take a look at your /performance/begin/ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
 
 7.Open /performance/begin/Index.html in Visual Studio Code
 
-8.Replace all references to `css/` to `wwwroot/css/` to reference the minified CSS files
+8.Replace all references to `css/` to `wwwroot/css/`. This will mean that the HTML references the minified CSS files that Gulp will create (Use Ctrl + F)
 
-9.Replace all references to `js/` to `wwwroot/js/` to reference the minified JS files
+9.Replace all references to `js/` to `wwwroot/js/`.
 
-10.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. The scores will not change by much because of the relatively low number of CSS and JS files. Howeve rin a real world project this would have a bigger impact.
+10.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. The scores will not change by much because of the relatively low number of CSS and JS files. However in a real world project this would have a bigger impact.
 
 ##Bundle CSS and Javascript files with Gulp
 Now that we have minified our CSS and JS files, we need to bundle them together to reduce the number of requests required. YSlow says "Decreasing the number of components on a page reduces the number of HTTP requests required to render the page, resulting in faster page loads. Some ways to reduce the number of components include: combine files, combine multiple scripts into one script, combine multiple CSS files into one style sheet, and use CSS Sprites and image maps.".
