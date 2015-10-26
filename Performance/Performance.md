@@ -249,7 +249,7 @@ gulp.task('task-jsmin', function() {
 
 12.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/js/bundle.js"></script>`
 
-13.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100
+13.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100 and your Google Pagespeed Insights scores will now be 80/100 and 90/100.
 
 ##Serve static files from Azure Storage
 Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used. So to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content. The files have all been configured with Expires headers and because they are stored in Azure Storage the YSlow ETags and Cookie-less domains rules will also now pass.
