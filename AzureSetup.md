@@ -11,7 +11,7 @@ In this step, we'll fork this GitHub repository which you can then use to enable
 ##2. Get an Azure subcription
 You'll need a subscription to use Azure. If you already have one, carry on to the next steps.
 
-If you do not have a subsciption, you can get a free trial with £125 credits (more than enough to do this lab) from [here](https://azure.microsoft.com/en-us/pricing/free-trial/). You will be asked for credit card details to create a trial, but will not be charged unless you use more than £125 of resources or use paid servce beyond the trial period. This lab mainly uses free services.
+If you do not have a subsciption, you can get a free trial with £125 credits (more than enough to do this lab) from [here](https://azure.microsoft.com/en-us/pricing/free-trial/). You will be asked for credit card details to create a trial, but will not be charged unless you use more than £125 of resources or use paid servce beyond the trial period. This lab primarily uses free services.
 
 ##3. Create A Web App Service
 In this step you'll create a new 'Web App Service' to host your webiste.
@@ -28,7 +28,7 @@ Continuous integration means that every commit that happens in your GitHub repos
 
 1. Go to [http://portal.azure.com](portal.azure.com) and login
 2. Go to Browse > Web Apps and open the website you created in step 3
-3. In the main blade click the 'Deployment' tile. It says "Set up continuous deployment"
+3. Go to All Settings > Continuous Deployment
 4. Choose GitHub as the source
 5. Enter your GitHub credentials to authorize yourself
 6. Choose the 'Web-Performance-and-Compatbility' project
