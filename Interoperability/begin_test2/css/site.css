@@ -13,7 +13,7 @@
 }
 
 .thumbnail{
-	-cursor:zoom-in;
+	-webkit-cursor:zoom-in;
 }
 
 .modal-body img{
