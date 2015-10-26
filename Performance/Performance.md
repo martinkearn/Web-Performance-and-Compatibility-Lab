@@ -192,7 +192,7 @@ Now that we have minified our CSS and JS files, we need to bundle them together 
 
 Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.npmjs.com/package/gulp-concat/) and [gulp-gzip](https://www.npmjs.com/package/gulp-gzip/)
 
-1.Open a command prompt and navigate to your working folder ... {some local path}/performance/end
+1.Open a command prompt with administrative priviledges and navigate to your working folder ... {some local path}/performance/end
 
 2.Run `npm install gulp-concat`. This will install [gulp-concat](https://www.npmjs.com/package/gulp-concat/) to your project
 
@@ -204,8 +204,8 @@ Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.np
 
 ```
 var gulp = require('gulp'),
-	cssmin = require('gulp-cssmin'),
-	jsmin = require('gulp-uglify'),
+  cssmin = require('gulp-cssmin'),
+  jsmin = require('gulp-uglify'),
   concat = require('gulp-concat');
 ```
 
@@ -219,7 +219,7 @@ var gulp = require('gulp'),
   gzip = require('gulp-gzip');
 ```
 
-7.Add `.pipe(concat('bundle.css'))` in between the two existing `.pipe` statements in the `task-cssmin` block. Whgen complete it should look like this:
+7.Add `.pipe(concat('bundle.css'))` in between the two existing `.pipe` statements in the `task-cssmin` block. When complete it should look like this:
 
 ```
 gulp.task('task-cssmin', function() {
