@@ -8,7 +8,7 @@ gulp.task('task-cssmin', function() {
   gulp.src('css/*.css')
   .pipe(cssmin())
   .pipe(concat('bundle.css'))
-  .pipe(gzip())
+  .pipe(gzip({ append: true }))
   .pipe(gulp.dest("wwwroot/css"))
 });
 
@@ -16,7 +16,7 @@ gulp.task('task-jsmin', function() {
   gulp.src('js/*.js')
   .pipe(jsmin())
   .pipe(concat('bundle.js')) 
-  .pipe(gzip())
+  .pipe(gzip({ append: true }))
   .pipe(gulp.dest("wwwroot/js"))
 });
 
