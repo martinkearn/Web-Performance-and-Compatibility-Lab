@@ -8,14 +8,14 @@ gulp.task('task-cssmin', function() {
   gulp.src('css/*.css')
   .pipe(cssmin())
   .pipe(concat('bundle.css'))
-  .pipe(gulp.dest("wwwroot/css"))
+  .pipe(gulp.dest("wwwroot"))
 });
 
 gulp.task('task-jsmin', function() {
   gulp.src('js/*.js')
   .pipe(jsmin())
   .pipe(concat('bundle.js')) 
-  .pipe(gulp.dest("wwwroot/js"))
+  .pipe(gulp.dest("wwwroot"))
 });
 
 gulp.task("default", ['task-cssmin','task-jsmin'])
