@@ -28,9 +28,9 @@ The report tells us that there is a problem with the rendering mode for the page
 
 ```<meta http-equiv="x-ua-compatible" content="IE=8">```
 
-3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). You'll see that the site now passes 'Render Mode'
-
 This code forces the browser to try and render in IE8 mode which causes several compatibility problems. Where possible you should avoid old or non-standard doctypes or rendering modes and use the standard one which is `<!DOCTYPE html>`
+
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). You'll see that the site now passes 'Render Mode'
 
 ##3. Frameworks and Libraries
 One of the biggest causes for compatibility problems in most modern browsers is use of old libraries and frameworks. As libraries evolve, they are updated to work with modern browsers and some of the old hacks required for older browsers are removed so you should always try to use the latest versions of libraries and frameworks where possible, to make sure you have the very latest compatibility and interoperability fixes from the vendor.
@@ -45,7 +45,7 @@ The report says "We've found frameworks or libraries that are not up-to-date and
 
 ```<script src="js/jquery-2.1.4.min.js"></script>```
 
-3.(optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). You'll see that the site now passes 'Frameworks & libraries'.
 
 ##4. Browser Detection
 Browser detection is when web pages detect specific browser versions and make assumptions about features rather than detecting features themselves. This kind of code was necessary years ago, but it is not required now with modern browsers.
@@ -62,9 +62,9 @@ if (!Modernizr.svg) {
 }
 ```
 
-3.(optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
-
 This is a very simple example of how to do feature detection with Modernizr via JavaScript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivalent.
+
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 ##5. CSS prefixes
 A CSS prefix is where a CSS property is prefixed with a vendor specific label such as -webkit- or -ms-. Prefixes are used by browser vendors to implement early versions of CSS properties as they emerge. Eventually, if a CSS property becomes part of the standard it will be available without the prefix.
