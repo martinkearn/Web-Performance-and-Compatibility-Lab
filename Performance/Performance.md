@@ -102,7 +102,7 @@ As well as optimising images, it is important that they are served at the size i
 
 The page displays the thumbnail images at 350px wide, but the actual images are 1920px wide.
 
-There are many tools available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/) and [SmushIt](http://imgopt.com/).
+There are many tools available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/), [Optimizilla](http://optimizilla.com/) and [SmushIt](http://imgopt.com/).
 
 To save time, all the referenced images have been optimised, resized and stored in /performance/begin/optimisedimages, lets use them.
 
