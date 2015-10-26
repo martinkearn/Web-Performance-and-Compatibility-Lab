@@ -85,13 +85,13 @@ Font awesome is already part of the project, lets use it.
 4.Zoom in on the new icon in your browser and see that it remain crisp and high quality even when fully zoomed in.
 
 ##Analyse with Google Page Speed Insights
-The remaining YSlow suggestions all relate to optimising the delivery of static files. Before we do that, let's take a look at what Google Page Speed Insight say about our page. Google PageSpeed is the other main authoritative resources for analysing web performance. Google use a different ruleset but there is a lot of overlap with YSlow.
+The remaining YSlow suggestions all relate to optimising the delivery of static files. Before we do that, let's take a look at what Google Page Speed Insights say about our page. Google PageSpeed is the other main authoritative resources for analysing web performance. Google use a different ruleset but there is a lot of overlap with YSlow.
 
 1.Visit [https://developers.google.com/speed/pagespeed/insights/](https://developers.google.com/speed/pagespeed/insights/) in any browser
 
-2.Enter 'http://ninjacatgallery.azurewebsites.net/performance/begin/index.html' and click analyse
+2.Enter your url and click analyse
 
-3.Take a moment to look through the report both for Mobile and Desktop. Please note that we may have fixed some of these issues already in the previous section of this exercise (unless you have been publishing your own copy as we've gone along)
+3.Take a moment to look through the report both for Mobile and Desktop. The site should score 57/100 for mobile and 54/100 for desktop.
 
 4.Leave the report open as we'll refer back to it throughout the lab
 
