@@ -64,7 +64,7 @@ if (!Modernizr.svg) {
 
 This is a very simple example of how to do feature detection with Modernizr via JavaScript. We are checking if SVG is supported. If it is not, we are replacing the SVG icon in the header with a PNG equivalent.
 
-3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). You'll see that the site now passes 'Browser Detection'.
 
 ##5. CSS prefixes
 A CSS prefix is where a CSS property is prefixed with a vendor specific label such as -webkit- or -ms-. Prefixes are used by browser vendors to implement early versions of CSS properties as they emerge. Eventually, if a CSS property becomes part of the standard it will be available without the prefix.
@@ -77,9 +77,9 @@ This site uses Bootstrap which unfortunately does use a relatively large amount 
 
 2.Replace `-webkit-cursor:zoom-in` with `cursor:zoom-in`
 
-3.(optional) Publish the site if you can and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+We can now using the standard CSS 'cursor' property which means that all browsers that support it will be able to use it. If the -webkit prefix was left in, only webkit browser woudl support it
 
-We are now using the standard CSS cursor property which means that all browsers that support it will be able to use it.
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
 
 ##6. OPTIONAL. Re-scan the site
 If you are able to, upload the changes copy of your site and repeat step 1. You should find that the site now passes all tests in the 'Modern Web Interoperability' test
