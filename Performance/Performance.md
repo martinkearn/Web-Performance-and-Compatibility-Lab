@@ -39,7 +39,7 @@ According to YSlow, CSS references should always be in the HEAD of the html docu
 ```  
 3.Move this code to HEAD section (towards the top of the HTML file), just before the closing `</head>` line
 
-4.Commit your changes, wait for Azure to auto-deploy and re-test with YSlow. Your score will move to grade B 80/100
+4.Commit your changes, wait for Azure to auto-deploy, then re-test with YSlow. Your score will move to grade B 81/100.
 
 ##Move Javascript to the bottom of the file
 According to YSlow, Javascript references should be at the bottom of the page. YSlow says "JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable."
@@ -59,7 +59,7 @@ According to YSlow, Javascript references should be at the bottom of the page. Y
 ``` 
 3.Move this code to be located at the bottom of the BODY section, just before the closing `</body>` line 
 
-4.(optional) If you can, publish your page and re-test with YSlow. Your score will move to 82/100
+4.Commit your changes, wait for Azure to auto-deploy, then re-test with YSlow. Your score will move to 82/100.
 
 ##Replace the Twitter icon with a font
 This one is not picked up by YSlow because we are only using one icon in this page, but most websites use a large number of small images for icons (twitter, add to cart, contact etc). 
