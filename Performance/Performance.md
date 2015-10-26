@@ -7,15 +7,17 @@ Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setu
 ##Analyse with YSlow
 YSlow is a tool from Yahoo that analyses a site against Yahoo's own web performance rule set. YSlow is a well established industry benchmark for web site performance.
 
-A copy of the /performance/begin/Index.html file is avaliable to scan [http://ninjacatgallery.azurewebsites.net/performance/begin/index.html](http://ninjacatgallery.azurewebsites.net/performance/begin/index.html) or you can run the test with your own publish copy of the file.
+Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to http://{your azure web site url}/performance/begin/index.html. For the rest of this labe we'll refer to that url as 'Your Url'.
 
-1.Open Google Chrome and install the Yahoo YSlow plug-in for Chrome from [yslow.org](http://yslow.org/). You'll see a 'speed dial' icon in your browser when it is installed
+If you have not been able to use Azure, you can see a copy of the site at [http://ninjacatgallery.azurewebsites.net/performance/begin/index.html](http://ninjacatgallery.azurewebsites.net/performance/begin/index.html). You can use this as your URL if you cannot use Azure.
 
-2.Navigate to [http://ninjacatgallery.azurewebsites.net/performance/begin/index.html](http://ninjacatgallery.azurewebsites.net/performance/begin/index.html)
+1.Open Google Chrome
+
+2.Navigate to your URL.
 
 3.Open the YSlow extension and click Run Test
 
-4.When the test completes, you'll see that the site gets a grace of C with a score of 79/100
+4.When the test completes, you'll see that the site gets a grace of C with a score of 79/100. Take a minute to look throuugh some of the failing tests.
 
 ##Move CSS to the top of the file
 According to YSlow, CSS references should always be in the HEAD of the html document. YSlow says "Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.".
@@ -35,9 +37,9 @@ According to YSlow, CSS references should always be in the HEAD of the html docu
   <link href="css/jumbotron.css" rel="stylesheet">
   <link href="css/site.css" rel="stylesheet">
 ```  
-3.Move this code to be located at the bottom of the HEAD section, just before the closing `</head>` line
+3.Move this code to HEAD section (towards the top of the HTML file), just before the closing `</head>` line
 
-4.(optional) If you can, publish your page and re-test with YSlow. Your score will move to grade B 80/100
+4.Commit your changes, wait for Azure to auto-deploy and re-test with YSlow. Your score will move to grade B 80/100
 
 ##Move Javascript to the bottom of the file
 According to YSlow, Javascript references should be at the bottom of the page. YSlow says "JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable."

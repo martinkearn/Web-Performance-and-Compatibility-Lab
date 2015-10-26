@@ -10,7 +10,10 @@ You can download **Visual Studio Code** for Windows, Linux and OSX from [https:/
 ##2. Install Google Chrome
 The lab will make use of a Google Chrome Extension (Yahoo YSlow), so you must have Google Chrome installed. You can download it [https://www.google.com/chrome](https://www.google.com/chrome/index.html)
 
-##3. Install NodeJS
+##5. Install YSlow Google Chrome Extension
+Open Google Chrome and install the Yahoo YSlow plug-in for Chrome from [yslow.org](http://yslow.org/). You'll see a 'speed dial' icon in your browser when it is installed.
+
+##4. Install NodeJS
 Node is required in order to run various packages required for the Performance lab. You can install Node for your platform from [https://nodejs.org/en/](https://nodejs.org/en/).
 
 ##6. OPTIONAL: Get access to Windows 10 with Microsoft Edge
