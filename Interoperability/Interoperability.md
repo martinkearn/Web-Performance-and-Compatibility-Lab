@@ -79,11 +79,9 @@ This site uses Bootstrap which unfortunately does use a relatively large amount 
 
 We can now using the standard CSS 'cursor' property which means that all browsers that support it will be able to use it. If the -webkit prefix was left in, only webkit browser woudl support it
 
-3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/)
+3.Commit your changes, wait for Azure to auto-deploy and re-test at [dev.modern.ie](https://dev.modern.ie/tools/staticscan/). The site will still fail the CSS prefixes test but these failures are caused by Bootstrap and is therefore out of your control. If you examine the list of selectors, you'll see that they are all coming from Bootstrap and not your own CSS.
 
-##6. OPTIONAL. Re-scan the site
-If you are able to, upload the changes copy of your site and repeat step 1. You should find that the site now passes all tests in the 'Modern Web Interoperability' test
+##6. You're done. move on to the next lab
+This lab is complete.
 
-You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/).
-
-Note: The site will still fail the CSS prefixes test but these failures are caused by Bootstrap and is therefore out of your control.
+You can see a copy of the site after these steps have been completed here: [http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/end/index.html) which you can scan at  [https://dev.modern.ie/tools/staticscan/](https://dev.modern.ie/tools/staticscan/). It should pass all of the 'Modern web interoperability' tests apart from CSS which fails on Bootstrap and is out of your control.
