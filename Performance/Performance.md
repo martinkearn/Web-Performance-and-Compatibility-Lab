@@ -127,7 +127,7 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 
 5.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and minify your files. If you have any issue running gulp, make sure you NODE_PATH is setup correctly; [have a look at this article](http://stackoverflow.com/questions/24027551/gulp-command-not-found-error-after-installing-gulp)
 
-6.Take a look at your /performance/begin/ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
+6.Take a look at your _/performance/begin/_ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
 
 7.Open _/performance/begin/Index.html_ in Visual Studio Code
 
