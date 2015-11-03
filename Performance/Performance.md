@@ -180,10 +180,15 @@ gulp.task("default", ['task-cssmin','task-jsmin'])
 
 7.Open _/performance/begin/Index.html_ in Visual Studio Code
 
-8.Remove all `link` elements that point to a CSS file in the HEAD and replace them with ```<link href="wwwroot/bundle.css" rel="stylesheet">```
+8.Remove all `link` elements that point to a CSS file in the HEAD and replace them with 
+```
+<link href="wwwroot/bundle.css" rel="stylesheet">
+```
 
 9.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with 
-```<script src="wwwroot/bundle.js"></script>```
+```
+<script src="wwwroot/bundle.js"></script>
+```
 
 10.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100 and your Google Pagespeed Insights scores will now be 80/100 and 90/100.
 
