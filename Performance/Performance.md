@@ -108,57 +108,7 @@ To save time, all the referenced images have been optimised, resized and stored 
 
 1.Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
 
-2.Open /performance/begin/Index.html in Visual Studio Code
-
-3.Replace the A tag with the ID of 'thumbnail-unicorn' with this code:
-
-```
-<a id="thumbnail-unicorn" href="images/Windows_Insider_Battlecat_Unicorn-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnUnicorn"><img src="images/Windows_Insider_Battlecat_Unicorn.png" alt="The ninja cat on a unicorn" /></a>
-```
-
-4.Replace the IMG tag with the ID of 'largeimage-unicorn' with this code:
-
-```
-<img id="largeimage-unicorn" src="images/Windows_Insider_Battlecat_Unicorn-Large.png" alt="The ninja cat on a unicorn" />
-```
-
-5.Replace the A tag with the ID of 'thumbnail-narwhal' with this code:
-
-```
-<a id="thumbnail-narwhal" href="images/Windows_Insider_Battlecat_Narwhal-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnNarwhal"><img src="images/Windows_Insider_Battlecat_Narwhal.png" alt="The ninja cat on a narwhal" /></a>
-```
-
-6.Replace the IMG tag with the ID of 'largeimage-narwhal' with this code:
-
-```
-<img id="largeimage-narwhal" src="images/Windows_Insider_Battlecat_Narwhal-Large.png" alt="The ninja cat on a narwhal" />
-```
-
-7.Replace the A tag with the ID of 'thumbnail-trex' with this code:
-
-```
-<a id="thumbnail-trex" href="images/Windows_Insider_Battlecat_Trex-Large.png" class="thumbnail" data-toggle="modal" data-target="#NinjacatOnTRex"><img src="images/Windows_Insider_Battlecat_Trex.png" alt="The ninja cat on a trex" /></a>
-```
-
-8.Replace the IMG tag with the ID of 'largeimage-trex' with this code:
-
-```
-<img id="largeimage-trex" src="images/Windows_Insider_Battlecat_Trex-Large.png" alt="The ninja cat on a trex" />
-```
-
-9.Replace the A tag with the ID of 'thumbnail-welcome' with this code:
-
-```
-<a id="thumbnail-welcome" href="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" class="thumbnail" data-toggle="modal" data-target="#WelcomeToTheInternet"><img src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu.jpg" alt="The original welcome to the internet image" /></a>
-```
-
-10.Replace the IMG tag with the ID of 'largeimage-welcome' with this code:
-
-```
-<img id="largeimage-welcome" src="images/welcome_to_the_internet__please_follow_me_by_sharpwriter-d5buwfu-Large.jpg" alt="The original welcome to the internet image" />
-```
-
-11.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 87/100 for desktop. The YSlow score will be at Grade B, 81.
+2.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 87/100 for desktop. The YSlow score will be at Grade B, 81.
 
 ##Minify CSS and Javascript files with Gulp
 Both YSlow and Google Page speed recomend the minification of both JS and CSS files. YSlow says "Minification removes unnecessary characters from a file to reduce its size, thereby improving load times. When a file is minified, comments and unneeded white space characters (space, newline, and tab) are removed. This improves response time since the size of the download files is reduced."
