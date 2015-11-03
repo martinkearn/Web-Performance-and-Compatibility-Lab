@@ -150,46 +150,41 @@ Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.np
 
 4.Open /performance/begin/gulpfile.js in Visual Studio Code
 
-5.Add `concat = require('gulp-concat')` the to the var statement so it looks like this:
+5.Replace the entire contents of gulpfile.js with the code below. This adds the gulp-concat plug in to the exitsing tasks to handle the bundling process.
 
 ```
 var gulp = require('gulp'),
-  cssmin = require('gulp-cssmin'),
-  jsmin = require('gulp-uglify'),
-  concat = require('gulp-concat');
-```
+	cssmin = require('gulp-minify-css'),
+	jsmin = require('gulp-uglify'),
+  concat = require('gulp-concat'),
+  gzip = require('gulp-gzip');
 
-6.Add `.pipe(concat('bundle.css'))` in between the two existing `.pipe` statements in the `task-cssmin` block. When complete it should look like this:
-
-```
 gulp.task('task-cssmin', function() {
   gulp.src('css/*.css')
   .pipe(cssmin())
   .pipe(concat('bundle.css'))
   .pipe(gulp.dest("wwwroot"))
 });
-```
 
-7.Add `.pipe(concat('bundle.js'))` in between the two existing `.pipe` statements in the `task-jsmin` block. Whgen complete it should look like this:
-
-```
 gulp.task('task-jsmin', function() {
   gulp.src('js/*.js')
   .pipe(jsmin())
-  .pipe(concat('bundle.js'))  
+  .pipe(concat('bundle.js')) 
   .pipe(gulp.dest("wwwroot"))
 });
+
+gulp.task("default", ['task-cssmin','task-jsmin'])
 ```
 
-8.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles in the _/wwwroot_ folder. They are bundle.js and bundle.css.
+6.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles in the _/wwwroot_ folder. They are bundle.js and bundle.css.
 
-9.Open _/performance/begin/Index.html_ in Visual Studio Code
+7.Open _/performance/begin/Index.html_ in Visual Studio Code
 
-10.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
+8.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
 
-11.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/bundle.js"></script>`
+9.Remove all `link` elements that point to a JS file at the bottom of the document and replace them with `<script src="wwwroot/bundle.js"></script>`
 
-12.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100 and your Google Pagespeed Insights scores will now be 80/100 and 90/100.
+10.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. This will have slightly improved your YSlow score to Grade B 83/100 and your Google Pagespeed Insights scores will now be 80/100 and 90/100.
 
 ##Serve static files from Azure Storage
 Several of the recommendations relate to the way static files are served. The way these are addressed, depends on the web server that is used. So to make the lab simpler, a copy of the static files have been loaded onto Azure Storage which is a superb location for storing and serving static content. The files have all been configured with Expires headers and because they are stored in Azure Storage the YSlow ETags and Cookie-less domains rules will also now pass.
