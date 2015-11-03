@@ -7,7 +7,7 @@ Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setu
 ##Analyse with YSlow
 YSlow is a tool from Yahoo that analyses a site against Yahoo's own web performance rule set. YSlow is a well established industry benchmark for web site performance.
 
-Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to http://{your azure web site url}/performance/begin/index.html. For the rest of this labe we'll refer to that url as 'Your Url'.
+Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to _http://{your azure web site url}/performance/begin/index.html_. For the rest of this lab we'll refer to that url as 'Your Url'.
 
 If you have not been able to use Azure, you can see a copy of the site at [http://ninjacatgallery.azurewebsites.net/performance/begin/index.html](http://ninjacatgallery.azurewebsites.net/performance/begin/index.html). You can use this as your URL if you cannot use Azure.
 
@@ -22,7 +22,7 @@ If you have not been able to use Azure, you can see a copy of the site at [http:
 ##Move CSS to the top of the file
 According to YSlow, CSS references should always be in the HEAD of the html document. YSlow says "Moving style sheets to the document HEAD element helps pages appear to load quicker since this allows pages to render progressively.".
 
-1.Open /performance/begin/Index.html in Visual Studio Code
+1.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 2.Locate the following code at the bottom of the document
 
@@ -44,7 +44,7 @@ According to YSlow, CSS references should always be in the HEAD of the html docu
 ##Move Javascript to the bottom of the file
 According to YSlow, Javascript references should be at the bottom of the page. YSlow says "JavaScript scripts block parallel downloads; that is, when a script is downloading, the browser will not start any other downloads. To help the page load faster, move scripts to the bottom of the page if they are deferrable."
 
-1.Open /performance/begin/Index.html in Visual Studio Code
+1.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 2.Locate the following code in the HEAD of the document
 
@@ -68,7 +68,7 @@ It is a great idea to use an icon font such as [Font Awesome](http://fortawesome
 
 Font awesome is already part of the project, lets use it.
 
-1.Open /performance/begin/Index.html in Visual Studio Code
+1.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 2.Find the line that looks like this at the bottom of the file
 
@@ -104,9 +104,9 @@ The page displays the thumbnail images at 350px wide, but the actual images are 
 
 There are many tools available to help with image optimisation including [Image Optimizer Visual Studio Extension](https://visualstudiogallery.msdn.microsoft.com/a56eddd3-d79b-48ac-8c8f-2db06ade77c3/), [Optimizilla](http://optimizilla.com/) and [SmushIt](http://imgopt.com/).
 
-To save time, all the referenced images have been optimised, resized and stored in /performance/begin/optimisedimages, lets use them.
+To save time, all the referenced images have been optimised, resized and stored in _/performance/begin/optimisedimages_, lets use them.
 
-1.Copy the contents of /performance/begin/optimisedimages to /performance/begin/images, overwriting existing files
+1.Copy the contents of _/performance/begin/optimisedimages_ to _/performance/begin/images_, overwriting existing files
 
 2.Commit your changes, wait for Azure to auto-deploy and re-test with Google PageSpeed and YSlow. You'll notice that 'optimise images' is no longer an issue and the overall Google PageSpeed score is now 76/100 for mobile and 87/100 for desktop. The YSlow score will be at Grade B, 81.
 
@@ -115,7 +115,7 @@ Both YSlow and Google Page speed recomend the minification of both JS and CSS fi
 
 To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javascript task runner and has plug-ins that perform minification tasks.
 
-1.Open a command prompt with administrative priviledge and navigate to your working folder ... {some local path}/performance/begin
+1.Open a command prompt with administrative priviledge and navigate to your working folder ... _{some local path}/performance/begin_
 
 2.Run `npm install gulp`. This will install [Gulp](http://gulpjs.com) to your project
 
@@ -129,7 +129,7 @@ To do the minification we will use [GulpJS](http://gulpjs.com) which is a Javasc
 
 6.Take a look at your /performance/begin/ folder structure. You'll notice a new folder called wwwroot which contains minified versions of your JS and CSS files. Take a look at some of them to see how they have been minified
 
-7.Open /performance/begin/Index.html in Visual Studio Code
+7.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 8.Replace all references to `css/` to `wwwroot/css/`. This will mean that the HTML references the minified CSS files that Gulp will create (Use Ctrl + F)
 
@@ -142,7 +142,7 @@ Now that we have minified our CSS and JS files, we need to bundle them together 
 
 Again, we'll use a few Gulp plug-in for this task; [gulp-contact](https://www.npmjs.com/package/gulp-concat/) and [gulp-gzip](https://www.npmjs.com/package/gulp-gzip/)
 
-1.Open a command prompt with administrative priviledges and navigate to your working folder ... {some local path}/performance/end
+1.Open a command prompt with administrative priviledges and navigate to your working folder ... _{some local path}/performance/end_
 
 2.Run `npm install gulp-concat`. This will install [gulp-concat](https://www.npmjs.com/package/gulp-concat/) to your project
 
@@ -181,9 +181,9 @@ gulp.task('task-jsmin', function() {
 });
 ```
 
-8.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles in the /wwwroot folder. They are bundle.js and bundle.css.
+8.Back in the command prompt, run `gulp`. This will execute the Gulp tasks and create the two file bundles in the _/wwwroot_ folder. They are bundle.js and bundle.css.
 
-9.Open /performance/begin/Index.html in Visual Studio Code
+9.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 10.Remove all `link` elements that point to a CSS file in the HEAD and replace them with `<link href="wwwroot/bundle.css" rel="stylesheet">`
 
@@ -196,7 +196,7 @@ Several of the recommendations relate to the way static files are served. The wa
 
 It is not within scope of this lab to talk through creating Azure Storage accounts, but it is very simple. Find out more [here](https://azure.microsoft.com/en-us/documentation/articles/storage-introduction/).
 
-1.Open /performance/begin/Index.html in Visual Studio Code
+1.Open _/performance/begin/Index.html_ in Visual Studio Code
 
 2.Replace all references to `wwwroot/` with `https://ninjacatgallery.blob.core.windows.net/static/`
 
