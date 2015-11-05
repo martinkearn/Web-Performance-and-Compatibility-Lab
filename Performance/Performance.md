@@ -2,12 +2,12 @@
 
 In this lab you will learn how to analyse your site for performance issues and how to fix the most common ones.
 
-Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setup](AzureSetup.md) labs before continuing.
+Please ensure you have completed both the [PC Setup](/PCSetup.md) and [Azure Setup](/AzureSetup.md) labs before continuing.
 
 ##Analyse with YSlow
 YSlow is a tool from Yahoo that analyses a site against Yahoo's own web performance rule set. YSlow is a well established industry benchmark for web site performance.
 
-Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to _http://{your azure web site url}/performance/begin/index.html_. For the rest of this lab we'll refer to that url as 'Your Url'.
+Providing you followed the [Azure Setup](/AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to _http://{your azure web site url}/performance/begin/index.html_. For the rest of this lab we'll refer to that url as 'Your Url'.
 
 If you have not been able to use Azure, you can see a copy of the site at [http://ninjacatgallery.azurewebsites.net/performance/begin/index.html](http://ninjacatgallery.azurewebsites.net/performance/begin/index.html). You can use this as your URL if you cannot use Azure.
 
