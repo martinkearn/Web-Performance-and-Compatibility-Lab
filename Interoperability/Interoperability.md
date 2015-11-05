@@ -2,14 +2,14 @@
 
 In this lab you will scan a website for modern web interoperability problems, and then fix them.
 
-If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with Azure, follow the steps in [Azure Setup](AzureSetup.md). However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
+If you are able to, the lab works great if you can publish the site to a live URL as you change it. This is very easy to do with Azure, follow the steps in [Azure Setup](/AzureSetup.md). However, this is not mandatory and you can do the lab without publishing your site, it just means you will not be able to re-test the changes you make.
 
-There are several oddities with the code used in this lab which are not related to interoperability. These are for the next lab on [Performance optimisation and tuning](Performance/Performance.md). Please try to ignore these if you can bear to.
+There are several oddities with the code used in this lab which are not related to interoperability. These are for the next lab on [Performance optimisation and tuning](/Performance/Performance.md). Please try to ignore these if you can bear to.
 
-Please ensure you have completed both the [PC Setup](PCSetup.md) and [Azure Setup](AzureSetup.md) labs before continuing.
+Please ensure you have completed both the [PC Setup](/PCSetup.md) and [Azure Setup](/AzureSetup.md) labs before continuing.
 
 ##1. Scan your site
-Providing you followed the [Azure Setup](AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to http://{your azure web site url}/interoperability/begin/index.html. For the rest of this labe we'll refer to that url as 'Your Url'.
+Providing you followed the [Azure Setup](/AzureSetup.md) lab, you should be able to get to the site in the /begin folder for this lab by going to http://{your azure web site url}/interoperability/begin/index.html. For the rest of this labe we'll refer to that url as 'Your Url'.
 
 If you have not been able to use Azure, you can see a copy of the site at [http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html](http://ninjacatgallery.azurewebsites.net/interoperability/begin/index.html). You can use this as your URL if you cannot use azure.
 
