@@ -16,7 +16,7 @@ If you do not have a subsciption, you can get a free trial with £125 credits (m
 ##3. Create A Web App Service
 In this step you'll create a new 'Web App Service' to host your webiste.
 
-1. Go to [http://portal.azure.com](portal.azure.com) and login
+1. Go to [portal.azure.com](http://portal.azure.com) and login
 2. Go to New > Web + Mobile > Web App
 3. Give the Web App a name that you'll remember. Choose appropriate settings for the Subscription, Resource Group and App Service Plan or accept the default if you are unsure. Please note that 'North Europe' is the closest data center to the UK.
 4. Click Create.
