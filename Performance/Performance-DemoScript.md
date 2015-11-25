@@ -1,5 +1,4 @@
-#Performance Optimisation and Tuning
-#Demo Script Version
+#Performance Optimisation and Tuning (Demo Script Version)
 
 This is a summarised version of [Performance.md](Performance.md); great for demos.
 
