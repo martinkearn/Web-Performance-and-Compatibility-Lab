@@ -4,6 +4,8 @@ In this lab you will learn how to analyse your site for performance issues and h
 
 Please ensure you have completed both the [PC Setup](/PCSetup.md) and [Azure Setup](/AzureSetup.md) labs before continuing.
 
+For a quick version of this guide see [Performance Demo Script](Performance-DemoScript.md).
+
 ##Analyse with YSlow
 YSlow is a tool from Yahoo that analyses a site against Yahoo's own web performance rule set. YSlow is a well established industry benchmark for web site performance.
 
